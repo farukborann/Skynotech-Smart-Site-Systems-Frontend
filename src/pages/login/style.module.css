@@ -1,0 +1,153 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--wb150);
+  z-index: 99999 !important;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.leftSide {
+  height: 95vh;
+  width: 47.5vw;
+  background: var(--login);
+  background-size: cover;
+  border-radius: 1em;
+}
+
+.rightSide {
+  height: 95vh;
+  width: 47.5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--wb50);
+  border-radius: 1em;
+}
+
+.rightContent {
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  color: var(--wb900);
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.title > h1 {
+  font-size: 3em;
+}
+
+.form {
+  height: 55vh;
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10em;
+}
+
+.formInput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25vw;
+  gap: 2em;
+}
+
+.inputGroup {
+  width: 25vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1em;
+}
+
+.label {
+  width: 100%;
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  color: var(--wb900);
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  width: 4em;
+}
+
+.input {
+  border: none;
+  padding: 1em 1em 1em 6em;
+  width: 100%;
+  height: 3.5em;
+  border-radius: 1em;
+  background-color: var(--wb100);
+  color: var(--wb900);
+}
+
+.input:nth-child(2) {
+  padding: 1em 2.5em 1em 6em;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.forgotPassword {
+  color: var(--wb900);
+  font-weight: 600;
+  user-select: none;
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.showIcon {
+  position: absolute;
+  color: var(--wb900);
+  right: 1em;
+  top: 1.1em;
+  font-size: 1.25em;
+  cursor: pointer;
+}
+
+.warn {
+  color: var(--red);
+  font-size: 0.85em;
+}
+
+.btn {
+  background-color: var(--wb900);
+  padding: 0.75em;
+  font-size: 1.25em;
+  border-radius: 2em;
+  color: var(--wb50);
+  transition: 0.5s;
+}
+
+.btn:hover {
+  /* opacity: .85; */
+  box-shadow: var(--shadowS);
+}
+
+.error {
+  color: var(--red);
+}

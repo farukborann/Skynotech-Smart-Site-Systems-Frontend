@@ -1,0 +1,618 @@
+:root {
+  /* BLACK & WHITE */
+  --wb50: #f9f9f9;
+  --wb100: #efefef;
+  --wb150: #e9e9e9;
+  --wb200: #dcdcdc;
+  --wb300: #bdbdbd;
+  --wb400: #989898;
+  --wb500: #7c7c7c;
+  --wb600: #656565;
+  --wb700: #525252;
+  --wb800: #434547;
+  --wb850: #3b3c3e;
+  --wb900: #222222;
+  --wb950: #18191a;
+
+  /* STATIC WHITE & BLACK */
+  --w: #f9f9f9;
+  --b: #18191a;
+  --bb: #242526;
+
+  /* MAIN COLOR 400*/
+  --color50: #f2f7fc;
+  --color100: #e1edf8;
+  --color200: #c9dff4;
+  --color300: #a4ccec;
+  --color400: #5a93d7;
+  --color500: #87b8e4;
+  --color600: #457acb;
+  --color700: #3c67b9;
+  --color800: #365597;
+  --color900: #304878;
+  --color950: #212d4a;
+
+  /* SHADOW */
+  --shadowS: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  --shadowM: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  --shadowL: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  --shadowOut: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  --shadowIn: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+
+  --opacityW: rgba(255, 255, 255, 0.1);
+  --opacityB: rgba(0, 0, 0, 0.1);
+
+  /* ICONS & BUTTONS */
+  --checked: #c5f6e3;
+  --checkedText: #59daa8;
+  --transparent-card: rgba(255, 255, 255, 0.6);
+  --checked-card: rgba(150, 228, 198, 0.5);
+  --red: #c1121f;
+  --hr: #2022311a;
+  --hrr: rgb(32, 34, 49, 0.2);
+
+  /* MODES */
+  --lightmodeBG: #f9f9f9;
+  --darkmodeBG: #222222;
+  --blueBG: linear-gradient(
+    120deg,
+    #87b8e4 30%,
+    #c9dff4 38%,
+    #c9dff4 40%,
+    #87b8e4 48%
+  );
+  --greenBG: linear-gradient(
+    120deg,
+    #52b788 30%,
+    #84d1ab 38%,
+    #84d1ab 40%,
+    #52b788 48%
+  );
+  --yellowBG: linear-gradient(
+    120deg,
+    #f9e016 30%,
+    #fcf049 38%,
+    #fcf049 40%,
+    #f9e016 48%
+  );
+  --orangeBG: linear-gradient(
+    120deg,
+    #ffb432 30%,
+    #ffd36d 38%,
+    #ffd36d 40%,
+    #ffb432 48%
+  );
+  --redBG: linear-gradient(
+    120deg,
+    #ff5959 30%,
+    #ff9595 38%,
+    #ff9595 40%,
+    #ff5959 48%
+  );
+  --purpleBG: linear-gradient(
+    120deg,
+    #c38ef2 30%,
+    #dabaf8 38%,
+    #dabaf8 40%,
+    #c38ef2 48%
+  );
+  --lightmodeLoadsBG: linear-gradient(
+    120deg,
+    #e5e5e5 30%,
+    #f0f0f0 38%,
+    #f0f0f0 40%,
+    #e5e5e5 48%
+  );
+  --darkmodeLoadsBG: linear-gradient(
+    120deg,
+    #3b3c3e 30%,
+    #434547 38%,
+    #434547 40%,
+    #3b3c3e 48%
+  );
+  /* IMAGES */
+  --login: url("../assets/banners/loginW.webp") center;
+
+  /* COLOR HARMONY */
+  --color-primer: #e2ff25;
+  --color-seconder: #b4a7ff;
+  --color-tertiary: #d9eaf1;
+  --color-quaternary: #ebeaf8;
+
+  /* BACKGROUND */
+  --MeshedBG: radial-gradient(
+      at 90% 21%,
+      var(--color-primer) 0px,
+      transparent 60%
+    ),
+    radial-gradient(at 39% 31%, var(--color-quaternary) 0px, transparent 60%),
+    radial-gradient(at 41% 3%, var(--color-seconder) 0px, transparent 60%),
+    radial-gradient(at 93% 45%, var(--color-tertiary) 0px, transparent 100%),
+    radial-gradient(at 83% 32%, var(--color-primer) 0px, transparent 60%),
+    radial-gradient(at 16% 65%, var(--color-seconder) 0px, transparent 100%);
+}
+
+:root[data-theme="dark"] {
+  /* BLACK & WHITE */
+  --wb50: #151616;
+  --wb100: #222222;
+  --wb150: #1b1b1b;
+  --wb200: #434547;
+  --wb300: #525252;
+  --wb400: #656565;
+  --wb500: #7c7c7c;
+  --wb600: #989898;
+  --wb700: #bdbdbd;
+  --wb800: #dcdcdc;
+  --wb850: #e9e9e9;
+  --wb900: #efefef;
+  --wb950: #f9f9f9;
+
+  /* MAIN COLOR 400*/
+  --color50: #212d4a;
+  --color100: #304878;
+  --color200: #365597;
+  --color300: #3c67b9;
+  --color400: #457acb;
+  --color500: #87b8e4;
+  --color600: #5a93d7;
+  --color700: #a4ccec;
+  --color800: #c9dff4;
+  --color900: #e1edf8;
+  --color950: #f2f7fc;
+
+  /* SHADOW */
+  --shadowS: rgba(232, 234, 236, 0.2) 0px 8px 24px;
+  --shadowM: rgba(238, 238, 240, 0.2) 0px 7px 29px 0px;
+  --shadowL: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+
+  --shadowOut: #5d71987a 6px 2px 16px 0px, rgba(0, 0, 0, 0.8) -6px -2px 16px 0px;
+  --shadowIn: #3f4e69 3px 3px 6px 0px inset,
+    rgba(0, 0, 0, 0.5) -3px -3px 6px 1px inset;
+
+  --hr: rgba(237, 242, 244, 0.1);
+  --transparent-card: rgba(0, 0, 0, 0.3);
+
+  /* IMAGE */
+  --login: url("../assets/banners/loginD.webp") center;
+
+  color-scheme: dark;
+}
+
+:root[data-theme="green-light"] {
+  /* MAIN COLOR 400 */
+  --color50: #effaf4;
+  --color100: #d8f3e2;
+  --color200: #b5e5ca;
+  --color300: #84d1ab;
+  --color400: #2e9b6c;
+  --color500: #52b788;
+  --color600: #1f7c56;
+  --color700: #196347;
+  --color800: #164f39;
+  --color900: #134130;
+  --color950: #0a241b;
+
+  /* BLACK & WHITE */
+  --wb50: #f9f9f9;
+  --wb100: #efefef;
+  --wb150: #e9e9e9;
+  --wb200: #dcdcdc;
+  --wb300: #bdbdbd;
+  --wb400: #989898;
+  --wb500: #7c7c7c;
+  --wb600: #656565;
+  --wb700: #525252;
+  --wb800: #434547;
+  --wb850: #3b3c3e;
+  --wb900: #222222;
+  --wb950: #18191a;
+
+  /* COLOR HARMONY */
+  --color-primer: #a8ff78;
+  --color-seconder: #78ffd6;
+  --color-tertiary: #d9eaf1;
+  --color-quaternary: #ebeaf8;
+
+  /* IMAGE */
+  --login: url("../assets/banners/loginG.webp") center;
+}
+
+:root[data-theme="green-dark"] {
+  /* MAIN COLOR 400 */
+  --color50: #0a241b;
+  --color100: #134130;
+  --color200: #164f39;
+  --color300: #196347;
+  --color400: #1f7c56;
+  --color500: #52b788;
+  --color600: #2e9b6c;
+  --color700: #84d1ab;
+  --color800: #b5e5ca;
+  --color900: #d8f3e2;
+  --color950: #effaf4;
+
+  /* BLACK & WHITE */
+  --wb50: #151616;
+  --wb100: #222222;
+  --wb150: #1b1b1b;
+  --wb200: #434547;
+  --wb300: #525252;
+  --wb400: #656565;
+  --wb500: #7c7c7c;
+  --wb600: #989898;
+  --wb700: #bdbdbd;
+  --wb800: #dcdcdc;
+  --wb850: #e9e9e9;
+  --wb900: #efefef;
+  --wb950: #f9f9f9;
+
+  /* SHADOW */
+  --shadowS: rgba(232, 234, 236, 0.2) 0px 8px 24px;
+  --shadowM: rgba(238, 238, 240, 0.2) 0px 7px 29px 0px;
+  --shadowL: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+
+  --shadowOut: #5d71987a 6px 2px 16px 0px, rgba(0, 0, 0, 0.8) -6px -2px 16px 0px;
+  --shadowIn: #3f4e69 3px 3px 6px 0px inset,
+    rgba(0, 0, 0, 0.5) -3px -3px 6px 1px inset;
+
+  --hr: rgba(237, 242, 244, 0.1);
+  --transparent-card: rgba(0, 0, 0, 0.3);
+
+  /* IMAGE */
+  --login: url("../assets/banners/loginGD.webp") center;
+  color-scheme: dark;
+}
+
+:root[data-theme="yellow-light"] {
+  /* MAIN COLOR 400 */
+  --color50: #fefee8;
+  --color100: #fefec3;
+  --color200: #fdfb8b;
+  --color300: #fcf049;
+  --color400: #e9c709;
+  --color500: #f9e016;
+  --color600: #c99c05;
+  --color700: #a07008;
+  --color800: #84580f;
+  --color900: #704813;
+  --color950: #422606;
+
+  /* BLACK & WHITE */
+  --wb50: #f9f9f9;
+  --wb100: #efefef;
+  --wb150: #e9e9e9;
+  --wb200: #dcdcdc;
+  --wb300: #bdbdbd;
+  --wb400: #989898;
+  --wb500: #7c7c7c;
+  --wb600: #656565;
+  --wb700: #525252;
+  --wb800: #434547;
+  --wb850: #3b3c3e;
+  --wb900: #222222;
+  --wb950: #18191a;
+
+  /* COLOR HARMONY */
+  --color-primer: #f3f9a7;
+  --color-seconder: #fff82f;
+  --color-tertiary: #ffffbf;
+  --color-quaternary: #fcffd6;
+
+  /* IMAGE */
+  --login: url("../assets/banners/loginY.webp") center;
+}
+
+:root[data-theme="yellow-dark"] {
+  /* MAIN COLOR 400 */
+  --color50: #422606;
+  --color100: #704813;
+  --color200: #84580f;
+  --color300: #a07008;
+  --color400: #c99c05;
+  --color500: #f9e016;
+  --color600: #e9c709;
+  --color700: #fcf049;
+  --color800: #fdfb8b;
+  --color900: #fefec3;
+  --color950: #fefee8;
+
+  /* BLACK & WHITE */
+  --wb50: #151616;
+  --wb100: #222222;
+  --wb150: #1b1b1b;
+  --wb200: #434547;
+  --wb300: #525252;
+  --wb400: #656565;
+  --wb500: #7c7c7c;
+  --wb600: #989898;
+  --wb700: #bdbdbd;
+  --wb800: #dcdcdc;
+  --wb850: #e9e9e9;
+  --wb900: #efefef;
+  --wb950: #f9f9f9;
+
+  /* SHADOW */
+  --shadowS: rgba(232, 234, 236, 0.2) 0px 8px 24px;
+  --shadowM: rgba(238, 238, 240, 0.2) 0px 7px 29px 0px;
+  --shadowL: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+
+  --shadowOut: #5d71987a 6px 2px 16px 0px, rgba(0, 0, 0, 0.8) -6px -2px 16px 0px;
+  --shadowIn: #3f4e69 3px 3px 6px 0px inset,
+    rgba(0, 0, 0, 0.5) -3px -3px 6px 1px inset;
+
+  --hr: rgba(237, 242, 244, 0.1);
+  --transparent-card: rgba(0, 0, 0, 0.3);
+
+  /* IMAGE */
+  --login: url("../assets/banners/loginYD.webp") center;
+
+  color-scheme: dark;
+}
+
+:root[data-theme="orange-light"] {
+  /* MAIN COLOR 400 */
+  --color50: #fffaec;
+  --color100: #fff5d3;
+  --color200: #ffe6a5;
+  --color300: #ffd36d;
+  --color400: #ffb432;
+  --color500: #ff9b0a;
+  --color600: #f77f00;
+  --color700: #cc6002;
+  --color800: #a14a0b;
+  --color900: #823e0c;
+  --color950: #461d04;
+
+  /* BLACK & WHITE */
+  --wb50: #f9f9f9;
+  --wb100: #efefef;
+  --wb150: #e9e9e9;
+  --wb200: #dcdcdc;
+  --wb300: #bdbdbd;
+  --wb400: #989898;
+  --wb500: #7c7c7c;
+  --wb600: #656565;
+  --wb700: #525252;
+  --wb800: #434547;
+  --wb850: #3b3c3e;
+  --wb900: #222222;
+  --wb950: #18191a;
+
+  /* COLOR HARMONY */
+  --color-primer: #ffa02c;
+  --color-seconder: #ff6237;
+  --color-tertiary: #ffdeb6;
+  --color-quaternary: #ffc7b7;
+
+  /* IMAGE */
+  --login: url("../assets/banners/loginO.webp") center;
+}
+
+:root[data-theme="orange-dark"] {
+  /* MAIN COLOR 400 */
+  --color50: #461d04;
+  --color100: #823e0c;
+  --color200: #a14a0b;
+  --color300: #cc6002;
+  --color400: #f77f00;
+  --color500: #ff9b0a;
+  --color600: #ffb432;
+  --color700: #ffd36d;
+  --color800: #ffe6a5;
+  --color900: #fff5d3;
+  --color950: #fffaec;
+
+  /* BLACK & WHITE */
+  --wb50: #151616;
+  --wb100: #222222;
+  --wb150: #1b1b1b;
+  --wb200: #434547;
+  --wb300: #525252;
+  --wb400: #656565;
+  --wb500: #7c7c7c;
+  --wb600: #989898;
+  --wb700: #bdbdbd;
+  --wb800: #dcdcdc;
+  --wb850: #e9e9e9;
+  --wb900: #efefef;
+  --wb950: #f9f9f9;
+
+  /* SHADOW */
+  --shadowS: rgba(232, 234, 236, 0.2) 0px 8px 24px;
+  --shadowM: rgba(238, 238, 240, 0.2) 0px 7px 29px 0px;
+  --shadowL: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+
+  --shadowOut: #5d71987a 6px 2px 16px 0px, rgba(0, 0, 0, 0.8) -6px -2px 16px 0px;
+  --shadowIn: #3f4e69 3px 3px 6px 0px inset,
+    rgba(0, 0, 0, 0.5) -3px -3px 6px 1px inset;
+
+  --hr: rgba(237, 242, 244, 0.1);
+  --transparent-card: rgba(0, 0, 0, 0.3);
+
+  /* IMAGE */
+  --login: url("../assets/banners/loginOD.webp") center;
+
+  color-scheme: dark;
+}
+
+:root[data-theme="red-light"] {
+  /* MAIN COLOR 400 */
+  --color50: #fff0f0;
+  --color100: #ffdddd;
+  --color200: #ffc1c1;
+  --color300: #ff9595;
+  --color400: #ff5959;
+  --color500: #fc0606;
+  --color600: #ff2626;
+  --color700: #d00000;
+  --color800: #af0505;
+  --color900: #900c0c;
+  --color950: #500000;
+
+  /* BLACK & WHITE */
+  --wb50: #f9f9f9;
+  --wb100: #efefef;
+  --wb150: #e9e9e9;
+  --wb200: #dcdcdc;
+  --wb300: #bdbdbd;
+  --wb400: #989898;
+  --wb500: #7c7c7c;
+  --wb600: #656565;
+  --wb700: #525252;
+  --wb800: #434547;
+  --wb850: #3b3c3e;
+  --wb900: #222222;
+  --wb950: #18191a;
+
+  /* COLOR HARMONY */
+  --color-primer: #fc5c7d;
+  --color-seconder: #6a82fb;
+  --color-tertiary: #d9eaf1;
+  --color-quaternary: #ebeaf8;
+
+  /* IMAGE */
+  --login: url("../assets/banners/loginR.webp") center;
+}
+
+:root[data-theme="red-dark"] {
+  /* MAIN COLOR 400 */
+  --color50: #500000;
+  --color100: #900c0c;
+  --color200: #af0505;
+  --color300: #d00000;
+  --color400: #ff2626;
+  --color500: #fc0606;
+  --color600: #ff5959;
+  --color700: #ff9595;
+  --color800: #ffc1c1;
+  --color900: #ffdddd;
+  --color950: #fff0f0;
+
+  /* BLACK & WHITE */
+  --wb50: #151616;
+  --wb100: #222222;
+  --wb150: #1b1b1b;
+  --wb200: #434547;
+  --wb300: #525252;
+  --wb400: #656565;
+  --wb500: #7c7c7c;
+  --wb600: #989898;
+  --wb700: #bdbdbd;
+  --wb800: #dcdcdc;
+  --wb850: #e9e9e9;
+  --wb900: #efefef;
+  --wb950: #f9f9f9;
+
+  /* SHADOW */
+  --shadowS: rgba(232, 234, 236, 0.2) 0px 8px 24px;
+  --shadowM: rgba(238, 238, 240, 0.2) 0px 7px 29px 0px;
+  --shadowL: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+
+  --shadowOut: #5d71987a 6px 2px 16px 0px, rgba(0, 0, 0, 0.8) -6px -2px 16px 0px;
+  --shadowIn: #3f4e69 3px 3px 6px 0px inset,
+    rgba(0, 0, 0, 0.5) -3px -3px 6px 1px inset;
+
+  --hr: rgba(237, 242, 244, 0.1);
+  --transparent-card: rgba(0, 0, 0, 0.3);
+
+  /* IMAGE */
+  --login: url("../assets/banners/loginRD.webp") center;
+
+  color-scheme: dark;
+}
+
+:root[data-theme="purple-light"] {
+  /* MAIN COLOR 400 */
+  --color50: #faf6fe;
+  --color100: #f4eafd;
+  --color200: #ead9fb;
+  --color300: #dabaf8;
+  --color400: #c38ef2;
+  --color500: #ac63e9;
+  --color600: #9d4edd;
+  --color700: #8130c0;
+  --color800: #6d2c9d;
+  --color900: #59257e;
+  --color950: #3c0f5c;
+
+  /* BLACK & WHITE */
+  --wb50: #f9f9f9;
+  --wb100: #efefef;
+  --wb150: #e9e9e9;
+  --wb200: #dcdcdc;
+  --wb300: #bdbdbd;
+  --wb400: #989898;
+  --wb500: #7c7c7c;
+  --wb600: #656565;
+  --wb700: #525252;
+  --wb800: #434547;
+  --wb850: #3b3c3e;
+  --wb900: #222222;
+  --wb950: #18191a;
+
+  /* COLOR HARMONY */
+  --color-primer: #9ab5e1;
+  --color-seconder: #f39fdc;
+  --color-tertiary: #ece1f5;
+  --color-quaternary: #c6cfe2;
+
+  /* IMAGE */
+  --login: url("../assets/banners/loginP.webp") center;
+}
+
+:root[data-theme="purple-dark"] {
+  /* MAIN COLOR 400 */
+  --color50: #3c0f5c;
+  --color100: #59257e;
+  --color200: #6d2c9d;
+  --color300: #8130c0;
+  --color400: #9d4edd;
+  --color500: #ac63e9;
+  --color600: #c38ef2;
+  --color700: #dabaf8;
+  --color800: #ead9fb;
+  --color900: #f4eafd;
+  --color950: #faf6fe;
+
+  /* BLACK & WHITE */
+  --wb50: #151616;
+  --wb100: #222222;
+  --wb150: #1b1b1b;
+  --wb200: #434547;
+  --wb300: #525252;
+  --wb400: #656565;
+  --wb500: #7c7c7c;
+  --wb600: #989898;
+  --wb700: #bdbdbd;
+  --wb800: #dcdcdc;
+  --wb850: #e9e9e9;
+  --wb900: #efefef;
+  --wb950: #f9f9f9;
+
+  /* COLOR HARMONY */
+  --color-primer: #bd83e9;
+  --color-seconder: #8ca6db;
+  --color-tertiary: #ece1f5;
+  --color-quaternary: #c6cfe2;
+
+  /* IMAGE */
+  --login: url("../assets/banners/loginPD.webp") center;
+
+  /* SHADOW */
+  --shadowS: rgba(232, 234, 236, 0.2) 0px 8px 24px;
+  --shadowM: rgba(238, 238, 240, 0.2) 0px 7px 29px 0px;
+  --shadowL: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+
+  --shadowOut: #5d71987a 6px 2px 16px 0px, rgba(0, 0, 0, 0.8) -6px -2px 16px 0px;
+  --shadowIn: #3f4e69 3px 3px 6px 0px inset,
+    rgba(0, 0, 0, 0.5) -3px -3px 6px 1px inset;
+
+  --hr: rgba(237, 242, 244, 0.1);
+  --transparent-card: rgba(0, 0, 0, 0.3);
+
+  color-scheme: dark;
+}

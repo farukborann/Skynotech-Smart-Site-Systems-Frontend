@@ -1,0 +1,224 @@
+/* TOGGLE BUTTON */
+
+.checkbox-wrapper {
+    position: relative;
+}
+
+.toggle-checkbox {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    appearance: none;
+    cursor: pointer;
+}
+
+.toggle {
+    position: relative;
+    display: block;
+    width: 42px;
+    height: 24px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transform: translate3d(0, 0, 0);
+}
+
+.toggle:before {
+    content: "";
+    position: relative;
+    top: 1px;
+    left: 1px;
+    width: 40px;
+    height: 22px;
+    display: block;
+    background: #c8ccd4;
+    border-radius: 12px;
+    transition: background 0.2s ease;
+}
+
+.toggle-span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    display: block;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(154, 153, 153, 0.75);
+    transition: all 0.2s ease;
+}
+
+.toggle-svg {
+    margin: 7px;
+    fill: none;
+}
+
+.toggle-path {
+    stroke: #c8ccd4;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 24;
+    stroke-dashoffset: 0;
+    transition: all 0.5s linear;
+}
+
+.toggle-checkbox:checked+.toggle:before {
+    background: #C5F6E3;
+}
+
+.toggle-checkbox:checked+.toggle span {
+    transform: translateX(18px);
+}
+
+.toggle-checkbox:checked+.toggle span path {
+    stroke: #000000;
+    stroke-dasharray: 25;
+    stroke-dashoffset: 25;
+}
+
+/* RADIOBUTTON */
+
+.radioBtn-label {
+    padding: .5rem 1.5rem;
+    background-color: var(--color-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 1.5rem;
+    color: var(--color-dark);
+    transition: .5s;
+}
+
+.radioBtn-label:has(.radioBtn:checked) {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+.radioBtn {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    appearance: none;
+    cursor: pointer;
+}
+
+/* CHECKBOX DIV */
+
+/* <div class="checkbox-wrapper-16">
+  <label class="checkbox-wrapper">
+    <input class="checkbox-input" type="checkbox">
+    <span class="checkbox-tile">
+      <span class="checkbox-label">Sketch</span>
+    </span>
+  </label>
+</div> */
+
+.checkbox-wrapper-16 *,
+.checkbox-wrapper-16 *:after,
+.checkbox-wrapper-16 *:before {
+    box-sizing: border-box;
+}
+
+.checkbox-wrapper-16 .checkbox-input {
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.checkbox-wrapper-16 .checkbox-input:checked+.checkbox-tile {
+    border-color: var(--checked);
+    box-shadow: 0 2.5px 5px rgba(0, 0, 0, 0.025);
+    color: var(--checked);
+    background-color: var(--checked);
+}
+
+.checkbox-wrapper-16 .checkbox-input:checked+.checkbox-tile:before {
+    transform: scale(1);
+    opacity: 1;
+    background-color: var(--checked);
+    border-color: var(--checked);
+}
+
+.checkbox-wrapper-16 .checkbox-input:checked+.checkbox-tile .checkbox-icon,
+.checkbox-wrapper-16 .checkbox-input:checked+.checkbox-tile .checkbox-label {
+    color: var(--wb50);
+}
+
+.checkbox-wrapper-16 .checkbox-input:focus+.checkbox-tile {
+    border-color: var(--checked);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 0 0 4px var(--checked);
+}
+
+.checkbox-wrapper-16 .checkbox-input:focus+.checkbox-tile:before {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.checkbox-wrapper-16 .checkbox-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    min-height: 2.5rem;
+    border-radius: 0.5rem;
+    border: 2px solid var(--wb200);
+    background-color: var(--wb100);
+    box-shadow: 0 2.5px 5px rgba(0, 0, 0, 0.025);
+    transition: 0.15s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.checkbox-wrapper-16 .checkbox-tile:before {
+    content: "";
+    position: absolute;
+    display: none;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 2px solid #b5bfd9;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 0.25rem;
+    left: 0.25rem;
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.25s ease;
+    background-size: 12px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.checkbox-wrapper-16 .checkbox-tile:hover {
+    border-color: var(--checked);
+    background-color: var(--checkedCard);
+}
+
+.checkbox-wrapper-16 .checkbox-tile:hover:before {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.checkbox-wrapper-16 .checkbox-icon {
+    transition: 0.375s ease;
+    color: #494949;
+}
+
+.checkbox-wrapper-16 .checkbox-icon svg {
+    width: 3rem;
+    height: 3rem;
+}
+
+.checkbox-wrapper-16 .checkbox-label {
+    color: #b5bfd9;
+    transition: 0.375s ease;
+    text-align: center;
+}
