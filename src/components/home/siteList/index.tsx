@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
-
-import { getSitesReq } from "../../../services/sites";
-import { SiteResponse } from "../../../services/sites/models";
+import { useNavigate } from "react-router-dom";
+import { getSitesReq } from "src/services/sites";
+import { SiteResponse } from "src/services/sites/models";
 
 import styles from "./style.module.css";
 
 const SiteList = () => {
+  const navigate = useNavigate();
+
   const [isOpen, setIsOpen] = useState(true);
 
   const [sites, setSites] = useState<SiteResponse[]>([]);
@@ -45,7 +47,7 @@ const SiteList = () => {
       <div className={isOpen ? styles.open : styles.content}>
         {sites.map((site, index) => (
           <div className={styles.siteName} key={index}>
-            <a href={`/site/${site._id}`}>{site.name}</a>
+            <div onClick={() => navigate(`/site/${site._id}`)}>{site.name}</div>
           </div>
         ))}
       </div>

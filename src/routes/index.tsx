@@ -1,23 +1,30 @@
-import { lazy } from "react";
+import { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 
-import AuthProvider from "../providers/AuthProvider";
+import { Loader } from "../components/loader";
 
+const RootLayout = lazy(() => import("src/layout"));
+const AuthProvider = lazy(() => import("src/providers/AuthProvider"));
 const LoginPage = lazy(() => import("../pages/login"));
 const HomePage = lazy(() => import("../pages/home"));
 const NotFoundPage = lazy(() => import("../pages/404"));
 
 const RouteList = () => {
   return (
-    <Routes>
-      <Route path="/" element={<AuthProvider />}>
+    <Suspense fallback={<Loader />}>
+      <Routes>
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/home" element={<HomePage />} />
-      </Route>
 
-      {/* <Route path="/404" element={<NotFoundPage />} /> */}
-      <Route path="*" element={<NotFoundPage />} />
-    </Routes>
+        <Route path="/" element={<AuthProvider />}>
+          <Route path="" element={<RootLayout />}>
+            <Route index path="/home" element={<HomePage />} />
+          </Route>
+        </Route>
+
+        {/* <Route path="/404" element={<NotFoundPage />} /> */}
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </Suspense>
   );
 };
 

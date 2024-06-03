@@ -10,6 +10,7 @@ const NotFoundPage = () => {
         alignContent: "center",
         justifyContent: "center",
         height: "100vh",
+        width: "100vw",
         fontSize: 26,
       }}
     >
@@ -194,7 +195,7 @@ const NotFoundPage = () => {
                 animation: "pulseColor 1000ms linear 3100ms forwards",
                 fontWeight: 500,
               }}
-              href="/"
+              href="/home"
             >
               <b
                 style={{
