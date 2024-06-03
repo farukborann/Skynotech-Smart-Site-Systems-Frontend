@@ -1,0 +1,73 @@
+.container {
+    min-height: 10vh;
+    max-height: calc((55vh - 2em)/3);
+    min-width: calc((37.5vw - 11em)/3);
+    max-width: calc((37.5vw - 10em)/2);
+    background-color: var(--wb50);
+    border: 1px solid var(--color200);
+    border-left: .5em solid var(--color600);
+    border-radius: .5em;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: .5em;
+    flex: auto;
+}
+
+.header {
+    display: flex;
+    gap: 1em;
+    min-height: 7.5vh;
+}
+
+.icon {
+    height: 2.25em;
+    width: 2.25em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .25em;
+    background-color: var(--color100);
+    color: var(--color400);
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.name {
+    font-weight: 400;
+    color: var(--color900);
+}
+
+.times {
+    display: flex;
+    align-items: center;
+    gap: .25em;
+    font-size: .75em;
+    color: var(--color700);
+}
+
+.managers {
+    display: flex;
+    align-items: center;
+}
+
+.manager {
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.manager:nth-child(2) {
+    transform: translateX(-.5em);
+}
+
+.manager:nth-child(3) {
+    transform: translateX(-1em);
+}

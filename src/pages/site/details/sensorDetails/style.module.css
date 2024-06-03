@@ -1,0 +1,35 @@
+.container {
+    max-width: 29vw;
+}
+
+.title_sec {
+    height: 5vh;
+    max-width: 29vw;
+    display: flex;
+    padding-bottom: .75em;
+}
+
+.title {
+    font-size: 1em;
+    color: var(--color600);
+    padding: .5em 1em;
+    background-color: var(--color200);
+    border-radius: .5em;
+    display: flex;
+    align-items: center;
+    gap: .5em;
+}
+
+.content {
+    min-height: 25vh;
+    max-height: 55vh;
+    max-width: 29vw;
+    /* background-color: var(--wb50); */
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    gap: .5em;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    /* box-shadow: var(--shadowS); */
+}

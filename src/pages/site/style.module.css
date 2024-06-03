@@ -1,0 +1,25 @@
+.container {
+    height: 100vh;
+    width: calc(100vw - 5em);
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+    padding: 5vh 2.5vw;
+    background-color: var(--wb150);
+}
+
+.header {
+    height: 40vh;
+    width: calc(95vw - 5em);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.main {
+    height: 60vh;
+    width: calc(95vw - 5em);
+    display: flex;
+    gap: 1em;
+}

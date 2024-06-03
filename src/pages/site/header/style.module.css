@@ -1,0 +1,116 @@
+.header {
+    width: calc(95vw - 5em);
+    height: 7.5vh;
+    color: var(--wb800);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mainTitle {
+    width: 40%;
+    font-size: 3rem;
+    color: var(--color800);
+}
+
+.name {
+    color: var(--color600);
+}
+
+.navigates {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    width: 30%;
+    height: 100%;
+}
+
+.navigate {
+    height: 4em;
+    width: 4em;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.profile {
+    height: 4em;
+    width: 4em;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ddTitle {
+    color: var(--wb300);
+    font-size: .75rem;
+}
+
+.ddContent {
+    position: absolute;
+    top: 4.5rem;
+    right: 0;
+    width: 10vw;
+    background-color: var(--wb50);
+    border-radius: .5rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    z-index: 9999;
+    transition: .3s;
+    transform-origin: top right;
+    transform: scale(1);
+}
+
+.visible {
+    transform: scale(0);
+}
+
+.ddElements {
+    display: flex;
+    flex-direction: column;
+}
+
+.ddLink {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.25rem;
+    border-radius: .25rem;
+    gap: .5rem;
+}
+
+.ddLink:hover {
+    background-color: var(--wb100);
+}
+
+.btn {
+    color: var(--wb800);
+    background-color: var(--wb50);
+    border: 1px solid var(--wb100);
+    box-shadow: var(--shadowS);
+    border-radius: 50%;
+    font-size: 2rem;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.btn:hover {
+    opacity: .85;
+}
+
+.btn:active {
+    transform: scale(.95);
+}

@@ -1,0 +1,29 @@
+.main {
+    height: 60vh;
+    width: calc(75vw - 6em);
+    display: flex;
+    gap: 2.5vh;
+}
+
+.infos {
+    max-width: calc(50vw - 8em);
+    height: 60vh;
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.sensor {
+    min-width: 12vw;
+    max-width: 30vw;
+}
+
+.scenario {
+    max-width: calc(37.5vw - 9em);
+}
+
+.sensor,
+.scenario {
+    height: 60vh;
+    border-radius: 1rem;
+}
