@@ -31,7 +31,7 @@ const AccountSlice = createSlice({
       })
       .addMatcher(isAnyOf(GetProfileThunk.rejected), (state, action) => {
         state.loading = false;
-        // TODO: maybe clear cookies or something
+        // TODO: clear cookies
 
         // Redirect to login page
         if (!unauthedPaths.includes(window.location.pathname))
