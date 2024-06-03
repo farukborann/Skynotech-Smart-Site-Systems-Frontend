@@ -3,6 +3,7 @@ import moment from "moment";
 import "moment/locale/tr";
 import { BiMessageAltError } from "react-icons/bi";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 import styles from "./style.module.css";
 
@@ -51,10 +52,10 @@ const DateHome = () => {
             <FaAngleRight onClick={handleNextDay} />
           </div>
         </div>
-        {/* <Link href="/settings/contact" className={styles.contact}>
+        <Link to="/settings/contact" className={styles.contact}>
           <BiMessageAltError />
           Hata Bildir
-        </Link> */}
+        </Link>
       </div>
       <div className={styles.content}>
         <div className={styles.timezone}>GMT +{numericOffset}</div>
