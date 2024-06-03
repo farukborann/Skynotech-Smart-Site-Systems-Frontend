@@ -1,13 +1,12 @@
 import { FaAngleRight } from "react-icons/fa";
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import DefaultPP from "src/assets/profil.svg";
 import { RootState } from "src/store/Reducers";
 
 import styles from "./style.module.css";
 
 const ProfileSection = () => {
-  const navigate = useNavigate();
   const currentUser = useSelector((state: RootState) => state.userData.data);
 
   return (
@@ -26,9 +25,9 @@ const ProfileSection = () => {
           </p>
           <p className={styles.role}>{currentUser?.role}</p>
         </div>
-        <div onClick={() => navigate("/settings")} className={styles.go}>
+        <Link to="/settings" className={styles.go}>
           <FaAngleRight />
-        </div>
+        </Link>
       </div>
     </div>
   );
