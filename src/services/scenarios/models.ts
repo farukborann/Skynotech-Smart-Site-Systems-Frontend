@@ -1,3 +1,7 @@
+import { SensorResponse } from "../sensors/models";
+import { SiteResponse } from "../sites/models";
+import { SubSystemResponse } from "../sub-systems/models";
+
 // Request Models
 export interface CreateScenarioRequest {
   name: string;
@@ -20,8 +24,6 @@ export interface UpdateScenarioRequest {
 }
 
 // Response Models
-export type ScenariosResponse = ScenarioResponse[];
-
 export interface ScenarioResponse {
   _id: string;
   name: string;
@@ -39,4 +41,11 @@ export interface ScenarioResponse {
 export interface ScenarioIgnition {
   ignitionIndex: number;
   status: boolean;
+}
+
+export interface UsersScenario {
+  scenario: ScenarioResponse;
+  sensor: SensorResponse;
+  subSystem: SubSystemResponse;
+  site: SiteResponse;
 }

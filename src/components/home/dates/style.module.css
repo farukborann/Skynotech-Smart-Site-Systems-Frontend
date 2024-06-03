@@ -1,0 +1,114 @@
+.header {
+    height: 100%;
+    width: calc(85vw - 11em);
+    font-size: 1em;
+    color: var(--b);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    user-select: none;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.date {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+}
+
+.icons>svg {
+    cursor: pointer;
+}
+
+.contact {
+    padding: .5em 1em;
+    color: var(--red);
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.content {
+    width: calc(85vw - 13em);
+    height: 12.5vh;
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    user-select: none;
+}
+
+.timezone {
+    height: 12.5vh;
+    width: 4vw;
+    background-color: rgba(0, 0, 0, .1);
+    backdrop-filter: blue(8px);
+    border-radius: 1em;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    writing-mode: vertical-lr;
+    text-orientation: sideways-right;
+    transform: rotate(180deg);
+    color: var(--b);
+    font-size: 1.25em;
+}
+
+.days {
+    width: calc(81vw - 13.5em);
+    height: 100%;
+    display: flex;
+    gap: .5em;
+}
+
+.day {
+    height: 100%;
+    width: calc((81vw - 16.5em)/7);
+    border-radius: 1em;
+    background-color: rgba(0, 0, 0, .1);
+    backdrop-filter: blue(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.dayName {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: rgba(0, 0, 0, .4);
+}
+
+.dayNumber {
+    font-size: 5em;
+    position: relative;
+}
+
+.radio {
+    height: 100%;
+    width: 100%;
+    appearance: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+}
+
+.day:has(.radio:checked) {
+    background-color: var(--w);
+    color: var(--color-seconder);
+}

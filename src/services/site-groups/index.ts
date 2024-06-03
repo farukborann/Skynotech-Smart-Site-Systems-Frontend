@@ -3,13 +3,12 @@ import { getReq, postReq, patchReq, deleteReq } from "..";
 import {
   CreateSiteGroupRequest,
   SiteGroupResponse,
-  SiteGroupsResponse,
   UpdateSiteGroupRequest,
 } from "./models";
 import { QueryWithIdRequest } from "../models";
 
 export async function getAllSiteGroups() {
-  const data = getReq<SiteGroupsResponse>("/site-groups");
+  const data = getReq<SiteGroupResponse[]>("/site-groups");
 
   return data;
 }

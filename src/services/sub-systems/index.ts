@@ -3,14 +3,13 @@ import { getReq, postReq, patchReq, deleteReq } from "..";
 import {
   CreateSubSystemRequest,
   SubSystemResponse,
-  SubSystemsResponse,
   UpdateIgnitionStatusRequest,
   UpdateSubSystemRequest,
 } from "./models";
 import { QueryWithIdRequest } from "../models";
 
 export async function getAllSubSystemsReq() {
-  const data = await getReq<SubSystemsResponse>("/sub-systems");
+  const data = await getReq<SubSystemResponse[]>("/sub-systems");
 
   return data;
 }
@@ -22,7 +21,7 @@ export async function getSubSystemByIdReq(query: QueryWithIdRequest) {
 }
 
 export async function getSubSystemsBySiteIdReq(query: QueryWithIdRequest) {
-  const data = await getReq<SubSystemsResponse>(
+  const data = await getReq<SubSystemResponse[]>(
     `/sub-systems/site/${query.id}`
   );
 

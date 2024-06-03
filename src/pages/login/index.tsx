@@ -5,9 +5,11 @@ import {
   IoEyeOutline,
   IoEyeOffOutline,
 } from "react-icons/io5";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 import { loginReq } from "../../services/users/";
+import { GetProfileThunk } from "../../store/Reducers/Account/thunks";
 
 import styles from "./style.module.css";
 
@@ -21,7 +23,8 @@ export default function LoginPage() {
     setVisible(!visible);
   };
 
-  let navigate = useNavigate();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleForm = async (event: any) => {
     event.preventDefault();
@@ -44,7 +47,8 @@ export default function LoginPage() {
 
     // else successful, hata mesajını sıfırla
     setErrorMessage("");
-    navigate("/dashboard");
+    dispatch(GetProfileThunk() as any);
+    navigate("/home");
   };
 
   return (

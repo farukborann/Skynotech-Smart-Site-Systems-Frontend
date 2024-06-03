@@ -20,8 +20,6 @@ export interface UpdateSiteRequest {
 }
 
 // Response Models
-export type SitesResponse = SiteResponse[];
-
 export interface SiteResponse {
   _id: string;
   name: string;
@@ -29,8 +27,8 @@ export interface SiteResponse {
   province: string;
   district: string;
   mqttTopic: string;
-  admins: any[];
-  users: any[];
+  admins: string[];
+  users: string[];
   deleted: boolean;
   createdAt: string;
   updatedAt: string;

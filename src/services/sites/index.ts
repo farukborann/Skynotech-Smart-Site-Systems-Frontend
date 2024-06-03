@@ -1,15 +1,10 @@
 import { getReq, patchReq, postReq, deleteReq } from "..";
 
-import {
-  CreateSiteRequest,
-  SiteResponse,
-  SitesResponse,
-  UpdateSiteRequest,
-} from "./models";
+import { CreateSiteRequest, SiteResponse, UpdateSiteRequest } from "./models";
 import { QueryWithIdRequest } from "../models";
 
 export async function getSitesReq() {
-  const data = await getReq<SitesResponse>("/sites");
+  const data = await getReq<SiteResponse[]>("/sites");
 
   return data;
 }

@@ -16,8 +16,6 @@ export interface UpdateSiteGroupRequest {
 }
 
 // Response Models
-export type SiteGroupsResponse = SiteGroupResponse[];
-
 export interface SiteGroupResponse {
   _id: string;
   name: string;

@@ -1,0 +1,73 @@
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(5vh + 2em);
+    max-height: calc(70vh - 9em);
+    overflow: hidden;
+    color: var(--w);
+    transition: 1s;
+}
+
+.header {
+    height: calc(5vh + 2em);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+.title {
+    font-size: 1.25em;
+    font-weight: 300;
+}
+
+.icon {
+    font-size: 1.25em;
+    cursor: pointer;
+}
+
+.content {
+    height: 0;
+    transform: translateX(-10em);
+    transition: 1s;
+    font-size: 1em;
+    padding-inline: 1em;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.open {
+    max-height: calc(70vh - 9em);
+    transform: translateX(0);
+    padding-inline: 1em;
+    transition: 1s;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.siteName {
+    padding-block: .5em;
+    font-size: .9em;
+    color: var(--w);
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    opacity: .5;
+    transition: .3s;
+}
+
+.siteName>svg {
+    font-size: 1.25em;
+}
+
+.siteName:hover {
+    opacity: 1;
+    color: var(--w);
+}

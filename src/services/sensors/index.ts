@@ -3,13 +3,12 @@ import { getReq, postReq, patchReq, deleteReq } from "..";
 import {
   CreateSensorRequest,
   SensorResponse,
-  SensorsResponse,
   UpdateSensorRequest,
 } from "./models";
 import { QueryWithIdRequest } from "../models";
 
 export async function getAllSensorsReq() {
-  const data = await getReq<SensorsResponse>("/sensors");
+  const data = await getReq<SensorResponse[]>("/sensors");
 
   return data;
 }
@@ -21,7 +20,9 @@ export async function getSensorByIdReq(query: QueryWithIdRequest) {
 }
 
 export async function getSensorsBySubSystemIdReq(query: QueryWithIdRequest) {
-  const data = await getReq<SensorsResponse>(`/sensors/sub-system/${query.id}`);
+  const data = await getReq<SensorResponse[]>(
+    `/sensors/sub-system/${query.id}`
+  );
 
   return data;
 }

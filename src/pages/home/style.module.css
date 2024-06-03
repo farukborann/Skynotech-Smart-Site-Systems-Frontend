@@ -1,0 +1,109 @@
+.container {
+    height: 100vh;
+    width: calc(100vw - 5em);
+    padding: 2em;
+    display: flex;
+    gap: 2em;
+    background-color: var(--b);
+}
+
+/* COLS */
+
+.sidebar {
+    height: calc(100vh - 4em);
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.weather {
+    width: 15vw;
+    height: 17.5vh;
+}
+
+.section {
+    height: calc(75vh - 6em);
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.sites {
+    width: 15vw;
+    min-height: calc(5vh + 2em);
+    max-height: calc(70vh - 9em);
+    overflow: hidden;
+}
+
+.problems {
+    width: 15vw;
+    min-height: calc(5vh + 2em);
+    max-height: calc(70vh - 9em);
+    overflow: hidden;
+}
+
+.user {
+    height: 7.5vh;
+}
+
+/* COL 2 */
+
+.content {
+    height: calc(100vh - 4em);
+    width: calc(85vw - 11em);
+    border-radius: 1em;
+    background: var(--meshedBG);
+    background-color: var(--color500);
+    overflow: hidden;
+    position: relative;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.header {
+    height: calc(22.5vh + 2em);
+    width: calc(85vw - 13em);
+    display: flex;
+    align-items: center;
+    color: var(--wb950);
+    gap: 1em;
+    z-index: 99;
+    position: relative;
+}
+
+.blob {
+    height: 50vh;
+    width: 60vw;
+    border-radius: 50%;
+    background: var(--color-primer);
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    filter: blur(100px);
+    z-index: 0;
+}
+
+.blob2 {
+    height: 50vh;
+    width: 60vw;
+    border-radius: 50%;
+    background: var(--color-seconder);
+    position: absolute;
+    bottom: -10%;
+    left: -10%;
+    filter: blur(100px);
+    z-index: 0;
+}
+
+.main {
+    height: calc(77.5vh - 8.5em);
+    width: calc(85vw - 13em);
+    background-color: var(--w);
+    border-radius: 1em;
+    z-index: 1;
+    overflow: hidden;
+}

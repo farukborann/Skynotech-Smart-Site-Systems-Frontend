@@ -1,0 +1,118 @@
+.container {
+    max-height: calc((77.5vh - 9.5rem)/3 - 2em);
+    min-width: 10vw;
+    border-radius: .5rem;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--color-primer);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+.info {
+    display: flex;
+    align-items: flex-start;
+    gap: .5em;
+}
+
+.icon {
+    height: 3.75rem;
+    width: 3.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--b);
+    border-radius: .25em;
+    color: var(--color-primer);
+    font-size: 1.5em;
+}
+
+.title {
+    display: flex;
+    height: 3.75rem;
+    flex-direction: column;
+    gap: .25em;
+}
+
+.siteName {
+    color: var(--b);
+    font-weight: 500;
+}
+
+.scenarioName {
+    color: var(--b);
+    opacity: .4;
+    text-transform: uppercase;
+    font-size: .85em;
+    font-weight: 300;
+}
+
+.time {
+    padding-right: .5em;
+    min-width: 5em;
+    display: flex;
+    justify-content: flex-end;
+    color: var(--b);
+    opacity: .3;
+    font-weight: 300;
+}
+
+.clocks {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.clock {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    border-radius: 1rem;
+    color: var(--b);
+    opacity: .3;
+    font-size: .75em;
+
+}
+
+.managers {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.manager {
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.manager:nth-child(3) {
+    transform: translateX(.5em);
+}
+
+.manager:nth-child(2) {
+    transform: translateX(1em);
+}
+
+.manager:nth-child(1) {
+    transform: translateX(1.5em);
+}
+
+.extraManagers {
+    height: 2em;
+    width: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-seconder);
+    border-radius: 50%;
+    color: var(--w);
+}

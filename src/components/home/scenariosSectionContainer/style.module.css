@@ -1,0 +1,8 @@
+.container {
+    height: calc(77.5vh - 8.5em);
+    width: calc(85vw - 13em);
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    user-select: none
+}

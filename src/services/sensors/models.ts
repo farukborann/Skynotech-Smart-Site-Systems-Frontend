@@ -12,8 +12,6 @@ export interface UpdateSensorRequest {
 }
 
 // Response Models
-export type SensorsResponse = SensorResponse[];
-
 export interface SensorResponse {
   _id: string;
   name: string;

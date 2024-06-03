@@ -1,0 +1,54 @@
+.container {
+    height: 7.5vh;
+    width: 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .75vw;
+    user-select: none;
+    color: var(--w);
+    border-radius: .5em;
+}
+
+.profileThumbnail {
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.infos {
+    height: 6vh;
+    width: 11.25vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    gap: .25em;
+}
+
+.name {
+    font-weight: 300;
+}
+
+.lastname {
+    font-size: .85em;
+    line-height: .75em;
+    opacity: .8;
+}
+
+.role {
+    font-size: .75em;
+    text-transform: uppercase;
+    opacity: .6;
+    font-weight: 200;
+}
+
+.go {
+    font-size: 1.5em;
+}

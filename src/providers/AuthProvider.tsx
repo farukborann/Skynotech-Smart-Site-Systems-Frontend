@@ -1,21 +1,15 @@
 import { useEffect } from "react";
-import { Outlet, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { Outlet } from "react-router-dom";
 
-import { profileReq } from "../services/users";
+import { GetProfileThunk } from "../store/Reducers/Account/thunks";
 
 const AuthProvider = () => {
-  let navigate = useNavigate();
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    profileReq().then((res) => {
-      if ("error" in res) {
-        sessionStorage.clear();
-        navigate("/login");
-        return;
-      }
+    dispatch(GetProfileThunk() as any);
 
-      navigate("/dashboard");
-    });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(5vh + 2em);
+    max-height: calc(70vh - 9em);
+    color: var(--w);
+}
+
+.header {
+    height: calc(5vh + 2em);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+.title {
+    font-size: 1.25em;
+    font-weight: 300;
+}
+
+.icon {
+    font-size: 1.25em;
+    cursor: pointer;
+}
+
+.content {
+    height: 0vh;
+    transition: 1s;
+    font-size: 1em;
+    padding-inline: 1em;
+    transform: translateX(-10em);
+}
+
+.open {
+    max-height: calc(65vh - 9em);
+    transform: translateX(0);
+    transition: 1s;
+    font-size: 1em;
+    padding-inline: 1em;
+}
+
+.problemDiv {
+    color: var(--gray);
+    font-size: .9em;
+}
+
+.problemDiv:nth-child(1) {
+    margin-top: 1em;
+}

@@ -5,6 +5,8 @@ import {
   CreateUserRequest,
   LoginRequest,
   UpdatePrivacySettingsRequest,
+  GetExternalUserRequest,
+  ExternalUserResponse,
 } from "./models";
 import { MessageResponse, QueryWithIdRequest } from "../models";
 
@@ -54,6 +56,12 @@ export async function updatePrivacySettingsReq(
 
 export async function deleteUserReq(query: QueryWithIdRequest) {
   const data = await deleteReq<MessageResponse>(`/users/${query.id}`);
+
+  return data;
+}
+
+export async function getExternalUserReq(payload: GetExternalUserRequest) {
+  const data = await postReq<ExternalUserResponse>(`/users/external`, payload);
 
   return data;
 }

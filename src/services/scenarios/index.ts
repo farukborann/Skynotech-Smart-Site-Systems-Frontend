@@ -3,13 +3,19 @@ import { getReq, postReq, patchReq, deleteReq } from "..";
 import {
   CreateScenarioRequest,
   ScenarioResponse,
-  ScenariosResponse,
   UpdateScenarioRequest,
+  UsersScenario,
 } from "./models";
 import { QueryWithIdRequest } from "../models";
 
 export async function getSensorsScenariosReq(query: QueryWithIdRequest) {
-  const data = await getReq<ScenariosResponse>(`/scenarios/${query.id}`);
+  const data = await getReq<ScenarioResponse[]>(`/scenarios/${query.id}`);
+
+  return data;
+}
+
+export async function getUsersScenariosReq() {
+  const data = await getReq<UsersScenario[]>(`/scenarios`);
 
   return data;
 }
