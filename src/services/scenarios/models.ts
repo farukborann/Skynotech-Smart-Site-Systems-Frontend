@@ -1,4 +1,3 @@
-import { SensorResponse } from "../sensors/models";
 import { SiteResponse } from "../sites/models";
 import { SubSystemResponse } from "../sub-systems/models";
 
