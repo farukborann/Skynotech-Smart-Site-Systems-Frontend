@@ -1,0 +1,155 @@
+.container {
+  height: 100vh;
+  width: calc(100vw - 5em);
+  padding: 5vh 2.5vw 5vh 0;
+  background-color: var(--b);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.titleContainer {
+  width: 30vw;
+  height: 20vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  color: var(--wb800);
+  z-index: 1000;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  width: 15vw;
+  gap: 0.5em;
+}
+
+.p {
+  letter-spacing: 0.1em;
+  font-weight: 300;
+  color: var(--wb400);
+}
+
+.h1 {
+  color: var(--wb600);
+  font-size: 2.5em;
+  line-height: 100%;
+}
+
+.activities {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 0.5em;
+  width: 50vw;
+  padding-left: 1vw;
+}
+
+.sidebar {
+  height: 90vh;
+  padding-inline: 2.5vw;
+  width: 35vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.header {
+  width: 30vw;
+  height: 20vh;
+}
+
+.form {
+  height: calc(70vh - 1em);
+  width: 30vw;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 60vw;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.sensorler {
+  width: calc(60vw - 2em);
+  height: 20vh;
+}
+
+.senaryolar {
+  width: calc(60vw - 2em);
+  height: 70vh;
+  background: var(--meshedBG);
+  background-color: var(--color500);
+  border-radius: 0.5em;
+}
+
+.confirmationBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.box {
+  height: 20vh;
+  width: 15vw;
+  background-color: var(--wb50);
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+  padding: 2em 2em 1em 2em;
+  border: 1px solid var(--hr);
+  box-shadow: var(--shadowS);
+  color: var(--wb800);
+}
+
+.text {
+  text-align: center;
+  font-size: 1em;
+}
+
+.confirmationButtons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1em;
+}
+
+.confirmationButton {
+  padding: 0.5em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  transition: 0.2s;
+}
+
+.confirmationButton:hover {
+  background-color: var(--hr);
+}
+
+.confirm {
+  color: var(--red);
+}
+
+.cancel {
+  color: var(--wb400);
+}

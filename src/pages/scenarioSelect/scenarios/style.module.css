@@ -1,0 +1,36 @@
+.container {
+    width: calc(60vw - 2em);
+    height: 70vh;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1vw;
+    position: relative;
+}
+
+.content {
+    height: 70vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vw;
+    overflow-y: auto;
+}
+
+.title {
+    height: 5vh;
+    width: 10vw;
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--b);
+}
+
+.timeline {
+    height: calc(55.5vh - 2em);
+    width: 100%;
+    background-color: var(--w);
+    border-radius: .75em;
+}

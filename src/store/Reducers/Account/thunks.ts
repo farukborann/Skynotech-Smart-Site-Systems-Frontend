@@ -8,7 +8,7 @@ export const GetProfileThunk = createAsyncThunk(
     const response = await profileReq();
 
     if ("error" in response) {
-      return thunkApi.rejectWithValue(response.error.message);
+      return thunkApi.rejectWithValue(response.error.responseError.message);
     }
 
     return response.result;

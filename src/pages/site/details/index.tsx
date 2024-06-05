@@ -9,6 +9,7 @@ import SensorsDetail from "./sensorDetails";
 // import SiteProfileScenariosComponent from "./siteScenarios";
 // import SiteProfileSensorsComponent from "./siteSensors";
 import styles from "./style.module.css";
+import ScenariosDetails from "./scenariosDetails";
 
 const SiteDetails = ({
   siteData,
@@ -35,13 +36,15 @@ const SiteDetails = ({
       />
       <div className={styles.infos}>
         <div className={styles.sensor}>
-          <SensorsDetail sensors={sensors} />
+          <SensorsDetail sensors={sensors} subSystems={subSystems} />
         </div>
         <div className={styles.scenario}>
-          {/* <SiteProfileScenariosComponent
-            siteDetail={siteDetail}
+          <ScenariosDetails
+            siteData={siteData}
+            subSystems={subSystems}
+            sensors={sensors}
             scenarios={scenarios}
-          /> */}
+          />
         </div>
       </div>
     </div>

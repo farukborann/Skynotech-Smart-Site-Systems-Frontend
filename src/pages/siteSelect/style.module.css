@@ -1,0 +1,252 @@
+.container {
+    width: calc(100vw - 5em);
+    height: 100vh;
+    padding: 2em;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+
+.blob1 {
+    position: absolute;
+    top: -20vh;
+    right: -40vh;
+    height: 70vh;
+    width: 70vh;
+    border-radius: 50%;
+    filter: blur(100px);
+    background-color: var(--color-primer);
+    z-index: -1;
+}
+
+.blob2 {
+    position: absolute;
+    bottom: -0vh;
+    right: -35vh;
+    height: 70vh;
+    width: 70vh;
+    border-radius: 50%;
+    filter: blur(100px);
+    background-color: var(--color-seconder);
+    z-index: -1;
+}
+
+.blob3 {
+    position: absolute;
+    bottom: -30vh;
+    right: -5vh;
+    height: 70vh;
+    width: 70vh;
+    border-radius: 50%;
+    filter: blur(100px);
+    background-color: var(--color-primer);
+    z-index: -2;
+}
+
+.blob4 {
+    position: absolute;
+    bottom: 0vh;
+    right: 0vh;
+    height: 70vh;
+    width: 70vh;
+    border-radius: 50%;
+    filter: blur(100px);
+    background-color: var(--color-quaternary);
+    z-index: -2;
+}
+
+.content {
+    height: calc(100vh - 4em);
+    width: calc(100vw - 9em);
+    display: flex;
+    gap: 1em;
+}
+
+/* LEFT */
+.secText {
+    width: 60%;
+    height: calc(100vh - 4em);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    width: 80%;
+    font-size: 4em;
+    line-height: 100%;
+    color: var(--wb900);
+    font-weight: 500;
+}
+
+.username {
+    color: var(--color500);
+    font-weight: 600;
+}
+
+/* RIGHT */
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1em;
+    width: 40%;
+    height: calc(100vh - 4em);
+}
+
+/* SEARCH BAR */
+
+.searchbarDiv {
+    height: 3em;
+    width: calc(25vw - 1em);
+    margin-bottom: 2em;
+    position: relative;
+    margin-right: .5em;
+}
+
+.searchIcon {
+    font-size: 2em;
+    position: absolute;
+    top: 50%;
+    left: 1em;
+    transform: translateY(-50%);
+    color: var(--wb400);
+}
+
+.search {
+    width: 100%;
+    border-radius: 1.5em;
+    padding: .75em;
+    border: 1px solid var(--wb200);
+    outline: none;
+    padding-left: 4em;
+    font-size: 1em;
+    background-color: var(--wb50);
+    color: var(--wb800);
+}
+
+.search:focus {
+    outline: none;
+}
+
+/* SITELER */
+
+.secSites {
+    width: 25vw;
+    height: calc(90vh - 8em);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+.sites {
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: flex-end;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0.5em;
+}
+
+.site {
+    height: calc(23.5vh - 1em);
+    width: calc(25vw - 1em);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+    border-radius: 1em;
+    background-color: var(--transparent-card);
+    backdrop-filter: blur(50px);
+    color: var(--wb900);
+    position: relative;
+    transition: .5s all ease;
+    border: 2px solid transparent;
+    overflow: hidden;
+    padding: 1em;
+}
+
+.site:has(.radio:checked) {
+    background-color: var(--checked-card);
+    border: 2px solid var(--checked);
+}
+
+.radio {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    appearance: none;
+    cursor: pointer;
+}
+
+.siteImg {
+    height: calc(23.5vh - 3em);
+    width: 15vh;
+    border-radius: .5em;
+    object-fit: cover;
+}
+
+.siteContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.contentTexts {
+    font-size: .85em;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    line-height: 1.5em;
+    max-width: 80%;
+}
+
+.systems {
+    height: 2em;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.systemIcon {
+    font-size: 1em;
+    padding: .25em;
+    background-color: var(--hr);
+    border-radius: .25em;
+}
+
+/* NEXT BUTTON */
+
+.footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 5em;
+    height: 5em;
+    color: var(--wb800);
+}
+
+.next {
+    background-color: var(--color500);
+    color: var(--w);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    padding: .75em;
+    border-radius: 2em;
+    box-shadow: 0 0 0 .5em var(--transparent-card);
+}

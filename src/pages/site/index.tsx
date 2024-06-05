@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getSensorsScenariosReq } from "src/services/scenarios";
+import { getScenariosBySensorId } from "src/services/scenarios";
 import { ScenarioResponse } from "src/services/scenarios/models";
 import { getSensorsBySubSystemIdReq } from "src/services/sensors";
 import { SensorResponse } from "src/services/sensors/models";
@@ -14,6 +14,7 @@ import SiteHeader from "./header";
 
 // import SiteProfileControlMQTTComponent from "./mqttControl";
 import styles from "./style.module.css";
+import SubSystemIgnitions from "./subSystemIgnitions";
 
 const SiteDetail = () => {
   const { siteId } = useParams();
@@ -90,7 +91,7 @@ const SiteDetail = () => {
     const newScenarios: { [key: string]: ScenarioResponse[] } = {};
 
     for (const sensor of Object.values(sensors).flat()) {
-      const scenarios = await getSensorsScenariosReq({ id: sensor._id });
+      const scenarios = await getScenariosBySensorId({ id: sensor._id });
 
       if ("error" in scenarios) {
         // TODO: check error and show
@@ -104,6 +105,8 @@ const SiteDetail = () => {
   }
 
   useEffect(() => {
+    if (!siteId) return;
+
     updateSiteData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [siteId]);
@@ -135,11 +138,7 @@ const SiteDetail = () => {
           sensors={sensors}
           scenarios={scenarios}
         />
-        {/* <SiteProfileControlMQTTComponent
-          siteDetail={siteDetail}
-          selectedSystem={selectedSystem}
-          handleSystemSelect={handleSystemSelect}
-        /> */}
+        <SubSystemIgnitions subSystems={subSystems} />
       </div>
     </div>
   );

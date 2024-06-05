@@ -19,3 +19,8 @@ export interface SensorResponse {
   mqttTopic: string;
   createdAt: string;
 }
+
+export interface SensorValueResponse {
+  value: string;
+  timestamp: string;
+}

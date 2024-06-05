@@ -33,9 +33,9 @@ export default function LoginPage() {
 
     if ("error" in response) {
       // Hata durumunda hata mesajını uygun şekilde ayarla
-      if (response.error.response?.status === 40) {
+      if (response.error.axiosError?.status === 40) {
         setErrorMessage("Şifre Yanlış");
-      } else if (response.error.response?.status === 406) {
+      } else if (response.error.axiosError?.status === 406) {
         setErrorMessage("Kullanıcı Bulunamadı");
       } else {
         // Diğer hata durumları için genel bir mesaj göster

@@ -8,7 +8,7 @@ import { getExternalUserReq } from "src/services/users";
 import { ExternalUserResponse } from "src/services/users/models";
 import { RootState } from "src/store/Reducers";
 
-import getIconForSubSystem from "../../../../../utils/sub-systems/getIcon";
+import getSubSystemProps from "src/utils/sub-systems/getProps";
 
 import styles from "./style.module.css";
 
@@ -35,6 +35,8 @@ const WillActiveScenariosHome = ({
       (userId) => userId !== userData._id
     );
     setManagersProfiles([...filteredAdmins, ...filteredUsers]);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -70,6 +72,8 @@ const WillActiveScenariosHome = ({
     };
 
     updateManagers();
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [managersProfiles]);
 
   const [timeString, setTimeString] = useState<string>("");
@@ -96,6 +100,8 @@ const WillActiveScenariosHome = ({
     } else {
       setTimeString(`Yaklaşık ${diffInHours} saat sonra`);
     }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -103,7 +109,7 @@ const WillActiveScenariosHome = ({
       <div className={styles.header}>
         <div className={styles.info}>
           <div className={styles.icon}>
-            {getIconForSubSystem(usersScenario.subSystem.systemType)?.icon}
+            {getSubSystemProps(usersScenario.subSystem.systemType)?.icon}
           </div>
           <div className={styles.title}>
             <p className={styles.siteName}>{usersScenario.site.name}</p>

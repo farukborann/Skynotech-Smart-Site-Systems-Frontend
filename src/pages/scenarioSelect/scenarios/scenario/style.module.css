@@ -1,0 +1,141 @@
+.container {
+    height: calc((70vh - 2vw) / 3);
+    width: calc((45.5vw - 2em)/4);
+    padding: 1em;
+    border-radius: .5em;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    background-color: var(--color50);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    height: 100%;
+}
+
+.title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: .5em;
+    font-size: 1.25em;
+    padding: .5em;
+    border-radius: .5em;
+    line-height: 1.5em;
+    height: 2.25em;
+    color: var(--color700);
+}
+
+.icon {
+    width: 1em;
+}
+
+.name {
+    width: calc(100% - 2.5em);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.settingsIcon {
+    position: absolute;
+    top: 50%;
+    right: 0em;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.settings {
+    width: 8em;
+    background-color: var(--wb50);
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    border-radius: .5em;
+    padding: .5em;
+    display: flex;
+    flex-direction: column;
+    gap: .25em;
+    transform-origin: top right;
+    /* Sağ üstten açılmasını sağlar */
+}
+
+.settingsTitle {
+    font-size: .65em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--wb300);
+    padding-bottom: .5em;
+    border-bottom: 1px solid var(--wb200);
+}
+
+.close {
+    cursor: pointer;
+    color: var(--wb900);
+}
+
+.settingsBtn {
+    font-size: .75em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .5em;
+    padding: 0.25em;
+    border-radius: .25em;
+    transition: .5s;
+}
+
+.deleteBtn {
+    color: var(--red);
+}
+
+.settingsBtn:hover {
+    background-color: var(--hr);
+}
+
+.show {
+    display: flex;
+}
+
+.hide {
+    display: none;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: .75em;
+    gap: 1em;
+    padding-inline: .75em;
+    opacity: .6;
+}
+
+.times {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.sensors {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: .25em;
+    font-size: .85em;
+    opacity: .6;
+}
+
+.sensor {
+    /* color: var(--wb50); */
+    padding: 0.25em .5em;
+    border-radius: 2em;
+    font-size: .85em;
+}

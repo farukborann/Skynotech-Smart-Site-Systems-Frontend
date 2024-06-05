@@ -22,10 +22,11 @@ export interface UpdateIgnitionStatusRequest {
 export interface SubSystemResponse {
   _id: string;
   systemType: SystemTypeType;
+  name: string;
   siteId: string;
   mqttTopic: string;
   ignitionCount: number;
-  lastIgnitionStatuses: { [key: string]: number };
+  lastIgnitionStatuses: { [key: string]: 1 | 0 };
   createdAt: string;
 }
 

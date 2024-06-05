@@ -1,0 +1,51 @@
+.container {
+    position: relative;
+    width: 14.5vw;
+    height: calc(30vh - 2em);
+}
+
+.button {
+    width: 14.5vw;
+    height: 19.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5em;
+    font-size: 1em;
+    padding: .75em;
+    border-radius: .5em;
+    border: 2px dashed #656565;
+    color: #989898;
+    cursor: pointer;
+    transition: .5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.icon {
+    font-size: 1.25em;
+}
+
+.button:hover {
+    color: #989898;
+    border-color: #bdbdbd;
+}
+
+.button:active {
+    transform: scale(.975);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1em;
+    transform: scale(1);
+}
+
+.scaled {
+    transform: scale(0);
+}

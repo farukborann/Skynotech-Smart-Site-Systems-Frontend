@@ -4,11 +4,11 @@ import { LuCalendarPlus } from "react-icons/lu";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import DefaultPP from "src/assets/profil.svg";
-import getIconForSubSystem from "src/utils/sub-systems/getIcon";
+import getSubSystemProps from "src/utils/sub-systems/getProps";
 
-import { SiteResponse } from "@/services/sites/models";
-import { SubSystemResponse } from "@/services/sub-systems/models";
-import { RootState } from "@/store/Reducers";
+import { SiteResponse } from "src/services/sites/models";
+import { SubSystemResponse } from "src/services/sub-systems/models";
+import { RootState } from "src/store/Reducers";
 
 import styles from "./style.module.css";
 
@@ -45,16 +45,18 @@ const SiteProfileHeaderComponent = ({
             <p className={styles.ddTitle}>SENARYO OLUŞTUR</p>
             <hr />
             <div className={styles.ddElements}>
-              {subSystems.map((subSystem) => (
-                <Link
-                  key={getIconForSubSystem(subSystem.systemType)?.link}
-                  className={styles.ddLink}
-                  to={`/scenario/${siteData._id}/${subSystem._id}`}
-                >
-                  {getIconForSubSystem(subSystem.systemType)?.icon}{" "}
-                  {getIconForSubSystem(subSystem.systemType)?.title}
-                </Link>
-              ))}
+              {subSystems.map((subSystem) => {
+                const props = getSubSystemProps(subSystem.systemType);
+                return (
+                  <Link
+                    key={props?.link}
+                    className={styles.ddLink}
+                    to={`/scenario/${siteData._id}/${subSystem._id}`}
+                  >
+                    {props?.icon} {`${props?.title} ${subSystem.name}`}
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </div>

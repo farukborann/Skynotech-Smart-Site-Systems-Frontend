@@ -50,13 +50,9 @@ const getTurkishWeatherCondition = (apiCondition) => {
     "Patchy light snow with thunder":
       "Yer yer hafif karla karışık yağmurlu gök gürültülü fırtına",
     "Patchy freezing drizzle possible": "Yer yer donan çisenti olasılığı",
-    "Blowing snow": "Kar fırtınası",
     Blizzard: "Kar fırtınası",
-    "Freezing fog": "Dondurucu sis",
     "Freezing drizzle": "Dondurucu çiseleyen yağmur",
-    "Heavy freezing drizzle": "Yoğun dondurucu çiseleyen yağmur",
     "Light freezing rain": "Hafif dondurucu yağmur",
-    "Moderate or heavy freezing rain": "Orta veya yoğun dondurucu yağmur",
     "Patchy light snow": "Yer yer hafif kar",
     "Light snow": "Hafif kar",
     "Patchy moderate snow": "Yer yer orta şiddetli kar",
@@ -67,8 +63,6 @@ const getTurkishWeatherCondition = (apiCondition) => {
     "Light showers of ice pellets": "Hafif dolulu sağanak",
     "Moderate or heavy showers of ice pellets":
       "Orta veya yoğun dolulu sağanak",
-    "Patchy light snow with thunder":
-      "Yer yer hafif karla karışık yağmurlu gök gürültülü fırtına",
     "Moderate or heavy snow with thunder":
       "Orta veya yoğun karla karışık yağmurlu gök gürültülü fırtına",
   };

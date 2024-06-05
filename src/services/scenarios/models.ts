@@ -5,47 +5,43 @@ import { SubSystemResponse } from "../sub-systems/models";
 // Request Models
 export interface CreateScenarioRequest {
   name: string;
-  sensorId: string;
-  min: number;
-  max: number;
+  subSystemId: string;
+  sensorId?: string;
+  min?: number;
+  max?: number;
   startDate: string;
   endDate: string;
-  ignitions: ScenarioIgnition[];
+  ignitions: { [key: string]: 1 | 0 };
 }
 
 export interface UpdateScenarioRequest {
   name?: string;
+  subSystemId?: string;
   sensorId?: string;
   min?: number;
   max?: number;
   startDate?: string;
   endDate?: string;
-  ignitions?: ScenarioIgnition[];
+  ignitions?: { [key: string]: 1 | 0 };
 }
 
 // Response Models
 export interface ScenarioResponse {
   _id: string;
   name: string;
-  sensorId: string;
-  min: number;
-  max: number;
+  subSystemId: string;
+  sensorId?: string;
+  min?: number;
+  max?: number;
   startDate: string;
   endDate: string;
-  ignitions: ScenarioIgnition[];
+  ignitions: { [key: string]: 1 | 0 };
   deleted: boolean;
   createdAt: string;
 }
 
-// General Models
-export interface ScenarioIgnition {
-  ignitionIndex: number;
-  status: boolean;
-}
-
 export interface UsersScenario {
   scenario: ScenarioResponse;
-  sensor: SensorResponse;
   subSystem: SubSystemResponse;
   site: SiteResponse;
 }

@@ -14,7 +14,19 @@ import {
   SystemTypeType,
 } from "src/services/sub-systems/models";
 
-const getIconForSubSystem = (systemType: SystemTypeType) => {
+export interface SubSystemProp {
+  title: string;
+  icon: JSX.Element;
+  link: string;
+  img: string;
+  sensor: string;
+  sensorDesc?: string;
+  birim: string;
+}
+
+const getSubSystemProps = (
+  systemType: SystemTypeType | undefined
+): SubSystemProp | null => {
   switch (systemType) {
     case SystemTypeEnum.GARDEN_WATERING:
       return {
@@ -77,4 +89,4 @@ const getIconForSubSystem = (systemType: SystemTypeType) => {
   }
 };
 
-export default getIconForSubSystem;
+export default getSubSystemProps;

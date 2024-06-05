@@ -1,11 +1,44 @@
 import moment from "moment";
 import { LuCalendarClock } from "react-icons/lu";
-import { SensorResponse } from "src/services/sensors/models";
-import getIconForSubSystem from "src/utils/sub-systems/getIcon";
+import {
+  SensorResponse,
+  SensorValueResponse,
+} from "src/services/sensors/models";
+import getSubSystemProps from "src/utils/sub-systems/getProps";
 
 import styles from "./style.module.css";
+import { SubSystemResponse } from "src/services/sub-systems/models";
+import { useEffect, useState } from "react";
+import { getSensorsValue } from "src/services/sensors";
 
-const SensorDetail = ({ sensor }: { sensor: SensorResponse }) => {
+const SensorDetail = ({
+  sensor,
+  subSystem,
+}: {
+  sensor: SensorResponse;
+  subSystem: SubSystemResponse;
+}) => {
+  const [lastValue, setLastValue] = useState<SensorValueResponse>({
+    value: "",
+    timestamp: "",
+  });
+
+  useEffect(() => {
+    // Her 1 saniyede bir sensör değerini güncelle
+    const interval = setInterval(async () => {
+      const response = await getSensorsValue({ id: sensor._id });
+
+      if ("error" in response) {
+        // TODO: Handle error
+        return;
+      }
+
+      setLastValue(response.result);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [sensor]);
+
   const formatDate = (timestamp: string) => {
     if (!timestamp) return ""; // timestamp tanımsızsa boş bir string döndür
 
@@ -33,13 +66,13 @@ const SensorDetail = ({ sensor }: { sensor: SensorResponse }) => {
     <div className={styles.container}>
       <div className={styles.header}>
         <div className={styles.icon}>
-          {getIconForSubSystem(sensor.system).icon}
+          {getSubSystemProps(subSystem.systemType)?.icon}
         </div>
         <div className={styles.title}>
           <p className={styles.name}>{sensor.name}</p>
           <p className={styles.times}>
             <LuCalendarClock />
-            {formatDate(sensor.lastUpdated)}
+            {formatDate(lastValue.timestamp)}
           </p>
         </div>
       </div>
@@ -47,13 +80,13 @@ const SensorDetail = ({ sensor }: { sensor: SensorResponse }) => {
         <div className={styles.battery}>
           <div
             className={styles.percent}
-            style={{ height: `${sensor.sensor}%` }}
+            style={{ height: `${lastValue.value}%` }}
           ></div>
         </div>
         <div className={styles.sensorDiv}>
-          <p className={styles.sensor}>{sensor.sensor}</p>
+          <p className={styles.sensor}>{lastValue.value}</p>
           <p className={styles.birim}>
-            {getIconForSubSystem(sensor.system).birim}
+            {getSubSystemProps(subSystem.systemType)?.birim}
           </p>
         </div>
       </div>

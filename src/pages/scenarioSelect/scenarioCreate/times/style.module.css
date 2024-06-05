@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.title {
+    font-size: .95em;
+    font-weight: 100;
+    color: #989898;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5vw;
+}
+
+.timeInput {
+    padding: .45em;
+    border-radius: .5em;
+    outline: none;
+    border: 2px solid #656565;
+    background-color: #434547;
+    color: var(--w);
+    width: 7vw;
+}

@@ -3,6 +3,7 @@ import { getReq, postReq, patchReq, deleteReq } from "..";
 import {
   CreateSensorRequest,
   SensorResponse,
+  SensorValueResponse,
   UpdateSensorRequest,
 } from "./models";
 import { QueryWithIdRequest } from "../models";
@@ -44,6 +45,12 @@ export async function updateSensorReq(
 
 export async function deleteSensorReq(query: QueryWithIdRequest) {
   const data = await deleteReq<SensorResponse>(`/sensors/${query.id}`);
+
+  return data;
+}
+
+export async function getSensorsValue(query: QueryWithIdRequest) {
+  const data = await getReq<SensorValueResponse>(`/sensors/value/${query.id}`);
 
   return data;
 }

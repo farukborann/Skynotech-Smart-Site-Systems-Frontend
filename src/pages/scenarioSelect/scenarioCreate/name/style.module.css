@@ -1,0 +1,54 @@
+.container {
+    width: 14.5vw;
+    padding-left: 2px;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.input_group {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    position: relative;
+}
+
+.title {
+    font-size: .95em;
+    font-weight: 100;
+    color: #989898;
+}
+
+.input {
+    padding: .5em;
+    border-radius: .5em;
+    outline: none;
+    border: 2px solid #656565;
+    background-color: #434547;
+    resize: none;
+    transition: .2s;
+}
+
+.input::placeholder {
+    color: #dcdcdc;
+    font-weight: 100;
+    font-size: .875em;
+}
+
+.input:focus {
+    box-shadow: 0 0 0 2px #dcdcdc;
+}
+
+.clearButton {
+    position: absolute;
+    bottom: .675em;
+    right: .5em;
+    color: var(--wb300);
+    z-index: 99;
+    font-size: 1.25em;
+}
+
+.clearButton:hover {
+    color: var(--red);
+}

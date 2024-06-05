@@ -1,0 +1,80 @@
+.container {
+    width: 14.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.content {
+    width: 14.5vw;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: .5vw;
+}
+
+.input_group {
+    width: 7vw;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.label {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    color: #989898;
+}
+
+.inputIcon {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+}
+
+.birim {
+    font-size: .875em;
+    color: #989898;
+}
+
+.input {
+    background-color: #434547;
+    border-radius: .5em;
+    width: 7vw;
+    border: 2px solid #656565;
+    color: #dcdcdc;
+    outline: none;
+    padding: .125em 0em .125em .75em;
+}
+
+.input:focus {
+    outline: none;
+    border: 2px solid #bdbdbd;
+}
+
+.button {
+    width: 14.5vw;
+    padding: .5em 1em;
+    border-radius: .375em;
+    border: 2px solid var(--red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: var(--red);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.button:hover {
+    background-color: var(--red);
+    color: var(--w);
+}
+
+.button:active {
+    transform: scale(.975);
+}

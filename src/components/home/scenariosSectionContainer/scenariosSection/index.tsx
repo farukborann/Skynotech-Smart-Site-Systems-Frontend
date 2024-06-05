@@ -52,6 +52,8 @@ const ScenariosSection = () => {
       window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("mouseup", handleMouseUp);
     };
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mouseDown, startX, scrollLeft]);
 
   const now = moment();
@@ -77,6 +79,8 @@ const ScenariosSection = () => {
       setScenarios(sortedScenarios);
     });
     // Şimdi formattedScenarios dizisini endTime'e göre sıralayabilirsiniz
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {

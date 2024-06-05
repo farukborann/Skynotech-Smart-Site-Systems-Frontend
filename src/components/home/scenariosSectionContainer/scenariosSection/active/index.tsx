@@ -7,7 +7,7 @@ import { UsersScenario } from "src/services/scenarios/models";
 import { getExternalUserReq } from "src/services/users";
 import { ExternalUserResponse } from "src/services/users/models";
 import { RootState } from "src/store/Reducers";
-import getIconForSubSystem from "src/utils/sub-systems/getIcon";
+import getSubSystemProps from "src/utils/sub-systems/getProps";
 
 import styles from "./style.module.css";
 
@@ -34,6 +34,7 @@ const ActiveScenariosHome = ({
       (userId) => userId !== userData._id
     );
     setManagersProfiles([...filteredAdmins, ...filteredUsers]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -69,6 +70,7 @@ const ActiveScenariosHome = ({
     };
 
     updateManagers();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [managersProfiles]);
 
   return (
@@ -76,7 +78,7 @@ const ActiveScenariosHome = ({
       <div className={styles.header}>
         <div className={styles.info}>
           <div className={styles.icon}>
-            {getIconForSubSystem(usersScenario.subSystem.systemType)?.icon}
+            {getSubSystemProps(usersScenario.subSystem.systemType)?.icon}
           </div>
           <div className={styles.title}>
             <p className={styles.siteName}>{usersScenario.site.name}</p>

@@ -8,8 +8,18 @@ import {
 } from "./models";
 import { QueryWithIdRequest } from "../models";
 
-export async function getSensorsScenariosReq(query: QueryWithIdRequest) {
-  const data = await getReq<ScenarioResponse[]>(`/scenarios/${query.id}`);
+export async function getScenariosBySensorId(query: QueryWithIdRequest) {
+  const data = await getReq<ScenarioResponse[]>(
+    `/scenarios/sensor/${query.id}`
+  );
+
+  return data;
+}
+
+export async function getScenariosBySubSystemId(query: QueryWithIdRequest) {
+  const data = await getReq<ScenarioResponse[]>(
+    `/scenarios/sub-system/${query.id}`
+  );
 
   return data;
 }
