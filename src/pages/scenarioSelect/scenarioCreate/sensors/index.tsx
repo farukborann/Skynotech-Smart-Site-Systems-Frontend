@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { MdAddChart } from "react-icons/md";
 import { SensorResponse } from "src/services/sensors/models";
 import { SubSystemProp } from "src/utils/sub-systems/getProps";

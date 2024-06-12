@@ -1,0 +1,121 @@
+.settingsMainContainer {
+  height: 95vh;
+  width: calc(83vw);
+  margin-left: 2em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "title head head head head"
+    "side main main main main"
+    "side main main main main"
+    "side main main main main"
+    "side main main main main"
+    "side main main main main"
+    "side main main main main"
+    "side main main main main"
+    "side main main main main";
+  border-radius: 1em;
+  border: 2px solid var(--wb200);
+  overflow: hidden;
+}
+
+.head,
+.title,
+.sidebarSettings,
+.settingsContent {
+  padding: 2em;
+}
+
+.title {
+  grid-area: title;
+  background-color: var(--wb100);
+  display: flex;
+  align-items: center;
+  font-size: 1.25em;
+  color: var(--wb800);
+  gap: 1em;
+  height: 6.5em;
+  border-bottom: 2px solid var(--wb200);
+}
+
+.title > svg {
+  color: var(--wb800);
+  font-size: 2em;
+  border: 2px solid var(--wb400);
+  border-radius: 0.25em;
+}
+
+.head {
+  grid-area: head;
+  background-color: var(--wb100);
+  border-left: 2px solid var(--wb200);
+  border-bottom: 2px solid var(--wb200);
+}
+
+.sidebarSettings {
+  grid-area: side;
+  background-color: var(--wb100);
+}
+
+.settingsContent {
+  grid-area: main;
+  background-color: var(--wb50);
+  border-left: 2px solid var(--wb200);
+}
+
+.loading {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.linewobble {
+  --uib-size: 80px;
+  --uib-speed: 1.55s;
+  --uib-color: black;
+  --uib-line-weight: 5px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--uib-line-weight);
+  width: var(--uib-size);
+  border-radius: calc(var(--uib-line-weight) / 2);
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+.linewobble::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--wb950);
+  opacity: 0.1;
+}
+
+.linewobble::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-radius: calc(var(--uib-line-weight) / 2);
+  animation: wobble var(--uib-speed) ease-in-out infinite;
+  transform: translateX(-90%);
+  background-color: var(--wb950);
+}
+
+@keyframes wobble {
+  0%,
+  100% {
+    transform: translateX(-90%);
+  }
+
+  50% {
+    transform: translateX(90%);
+  }
+}

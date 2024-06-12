@@ -1,0 +1,22 @@
+.container {
+  height: 55vh;
+  width: 21.5vw;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.title {
+  height: 2.5vh;
+  font-size: 1.25em;
+  color: var(--wb400);
+}
+
+.content {
+  height: calc(52.5vh - 1em);
+  width: calc(21.5vw - 2em);
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}

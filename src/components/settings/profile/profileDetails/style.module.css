@@ -1,0 +1,98 @@
+.container {
+  width: calc(40vw - 0.5em);
+  border-radius: 0.5em;
+  height: calc(37.5vh - 5em - 2px);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.content {
+  height: calc(33vh - 5.5em - 2px);
+  width: calc(40vw - 1em);
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 2.5fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1em;
+  border-radius: 0.5em;
+  padding: 1em;
+}
+
+.inputDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25em;
+  position: relative;
+}
+
+.label {
+  padding-left: 0.25em;
+  color: var(--wb400);
+}
+
+.input {
+  padding: 0.25em;
+  border-radius: 0.5em;
+  border: none;
+  width: 10vw;
+  /* border: 1px solid var(--wb200); */
+  background-color: var(--wb50);
+}
+
+.input::placeholder {
+  color: var(--wb950);
+}
+
+.password {
+  padding: 0.25em;
+  border-radius: 0.5em;
+  border: 1px solid var(--wb200);
+  background-color: var(--wb50);
+  width: 10vw;
+  transition: 0.2s;
+}
+
+.password::placeholder {
+  color: var(--wb400);
+  font-size: 0.85em;
+}
+
+.password:focus {
+  border: 1px solid var(--wb300);
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color200);
+}
+
+.showPassword {
+  position: absolute;
+  bottom: 1.5em;
+  left: calc(10vw + 1em);
+  font-size: 0.75em;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  border: 2px solid var(--wb100);
+  cursor: pointer;
+}
+
+.buttons {
+  height: 4.5vh;
+  width: calc(40vw - 1em);
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.btn {
+  height: 4.5vh;
+  padding-inline: 1.5em;
+}
+
+.submit {
+  border: 2px solid var(--wb150);
+  border-radius: 0.5em;
+}
+
+.cancel {
+  color: var(--red);
+}

@@ -1,0 +1,83 @@
+.preCard {
+  width: 100%;
+  height: 10em;
+  background: var(--wb50);
+  box-shadow: var(--shadowM);
+  padding: 1em;
+  gap: 0.5em;
+  border-radius: 0.5em;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+
+.flexBox {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  height: 100%;
+  width: 100%;
+  padding: 0.25em;
+}
+
+.preCardLoad {
+  width: 100%;
+  height: 35%;
+  border-radius: 0.5em;
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  animation: load89234 2s infinite;
+}
+
+.preCardColor {
+  width: 100%;
+  height: 65%;
+  border-radius: 0.5em;
+  background: linear-gradient(
+    120deg,
+    var(--wb200) 30%,
+    var(--wb100) 38%,
+    var(--wb100) 40%,
+    var(--wb200) 48%
+  );
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  animation: load89234 2s infinite;
+}
+
+.preCardTitle {
+  width: 100%;
+  height: 20%;
+  border-radius: 5px;
+  background: linear-gradient(
+    120deg,
+    var(--wb200) 30%,
+    var(--wb100) 38%,
+    var(--wb100) 40%,
+    var(--wb200) 48%
+  );
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  animation: load89234 2s infinite;
+}
+
+.preCardDesc {
+  width: 100%;
+  height: 80%;
+  border-radius: 5px;
+  background: linear-gradient(
+    120deg,
+    var(--wb200) 30%,
+    var(--wb100) 38%,
+    var(--wb100) 40%,
+    var(--wb200) 48%
+  );
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  animation: load89234 2s infinite;
+}
+
+@keyframes load89234 {
+  100% {
+    background-position: -100% 0;
+  }
+}

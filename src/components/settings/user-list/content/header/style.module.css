@@ -1,0 +1,114 @@
+.container {
+    height: 7.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.title {
+    font-size: 1em;
+    color: var(--wb600);
+}
+
+.content {
+    height: 4.5vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    border-radius: .5em;
+    background-color: var(--wb100);
+    color: var(--wb500);
+    font-weight: 300;
+    padding: .5em;
+    position: relative;
+}
+
+.label {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .25em 1em;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    border-radius: .25em;
+    transition: .3s;
+    transition-timing-function: linear(0,
+            0.1641 3.52%,
+            0.311 7.18%,
+            0.4413 10.99%,
+            0.5553 14.96%,
+            0.6539 19.12%,
+            0.738 23.5%,
+            0.8086 28.15%,
+            0.8662 33.12%,
+            0.9078 37.92%,
+            0.9405 43.12%,
+            0.965 48.84%,
+            0.9821 55.28%,
+            0.992 61.97%,
+            0.9976 70.09%,
+            1);
+}
+
+.label:has(.radio:checked) {
+    background-color: var(--wb950);
+    color: var(--wb50);
+}
+
+.label:has(.radio:not(:checked)):hover {
+    background-color: var(--wb200);
+}
+
+.radio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    appearance: none;
+    cursor: pointer;
+    z-index: 999;
+}
+
+
+.search {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.input {
+    padding: .25em .25em .25em 2.5em;
+    border-radius: .25em;
+    outline: none;
+    border: 2px solid var(--wb100);
+    color: var(--wb600);
+    background-color: var(--wb50);
+}
+
+.input::placeholder {
+    color: var(--wb300);
+}
+
+.input:focus {
+    border: 2px solid var(--wb200);
+}
+
+.icon {
+    font-size: 1.25em;
+    color: var(--wb400);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: .5em;
+}

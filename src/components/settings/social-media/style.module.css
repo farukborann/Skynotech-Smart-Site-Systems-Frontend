@@ -1,0 +1,67 @@
+.darkTheme {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4em;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.secTitle {
+    font-size: 2em;
+    color: var(--wb800);
+}
+
+.secInfo {
+    font-size: 1em;
+    font-weight: 300;
+    color: var(--wb400);
+    line-height: 1.5em;
+}
+
+.cards {
+    width: 80%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1.5em;
+}
+
+.card {
+    height: 4em;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.cardContent {
+    height: 4em;
+    width: 80%;
+    border: 2px solid var(--wb200);
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.socialIcon {
+    font-size: 2em;
+    color: var(--wb800);
+}
+
+.title {
+    font-size: 1.25em;
+    color: var(--wb800);
+}

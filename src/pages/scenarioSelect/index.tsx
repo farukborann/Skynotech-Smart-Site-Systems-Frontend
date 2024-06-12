@@ -7,7 +7,6 @@ import ScenariosRUD from "src/pages/scenarioSelect/scenarios";
 import ScenarioSensors from "src/pages/scenarioSelect/sensors";
 import {
   deleteScenarioReq,
-  getScenariosBySensorId,
   getScenariosBySubSystemId,
 } from "src/services/scenarios";
 import { ScenarioResponse } from "src/services/scenarios/models";

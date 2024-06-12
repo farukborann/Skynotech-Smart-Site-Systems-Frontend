@@ -1,0 +1,75 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 20vh;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.secTitle {
+    font-size: 1.5em;
+    color: var(--wb600);
+}
+
+.userCount {
+    color: var(--wb300);
+    font-size: 1.15em;
+    font-weight: 300;
+}
+
+.roles {
+    height: 12.5vh;
+    width: 100%;
+    border-radius: .5em;
+    backdrop-filter: brightness(.975);
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.roleDiv {
+    height: 100%;
+    width: 100%;
+    border-radius: .75em;
+    background-color: var(--wb50);
+    border: 1px solid var(--wb200);
+    display: flex;
+    justify-content: space-between;
+    padding: .75em .75em .75em 1em;
+}
+
+.desc {
+    display: flex;
+    flex-direction: column;
+    gap: .25em;
+    font-size: .95em;
+}
+
+.roleName {
+    color: var(--wb800);
+}
+
+.roleDesc {
+    font-size: .75em;
+    color: var(--wb400);
+}
+
+.roleNumber {
+    height: 2em;
+    font-size: 1.75em;
+    background-color: var(--wb100);
+    padding: .5em;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: .25em;
+    color: var(--color500);
+}

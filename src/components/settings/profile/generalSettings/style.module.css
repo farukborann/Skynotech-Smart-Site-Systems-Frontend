@@ -1,0 +1,106 @@
+.container {
+  height: 72.5vh;
+  width: 62.5vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.title {
+  font-size: 2em;
+  font-weight: 500;
+  color: var(--wb900);
+}
+
+.info {
+  font-size: 0.875em;
+  font-weight: 300;
+  line-height: 1.5em;
+  color: var(--wb300);
+}
+
+.line {
+  width: 62.5vw;
+  border-top: 1px solid var(--wb100);
+}
+
+.content {
+  height: 55vh;
+  width: 62.5vw;
+  display: flex;
+  align-items: flex-start;
+  gap: 1vw;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.settings {
+  height: 55vh;
+  width: 45vw;
+  background-color: var(--wb100);
+  border-radius: 0.5em;
+  padding: 1em;
+}
+
+.loading {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--wb50);
+}
+
+.linewobble {
+  --uib-size: 80px;
+  --uib-speed: 1.55s;
+  --uib-color: black;
+  --uib-line-weight: 5px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--uib-line-weight);
+  width: var(--uib-size);
+  border-radius: calc(var(--uib-line-weight) / 2);
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+.linewobble::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--wb950);
+  opacity: 0.1;
+}
+
+.linewobble::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-radius: calc(var(--uib-line-weight) / 2);
+  animation: wobble var(--uib-speed) ease-in-out infinite;
+  transform: translateX(-90%);
+  background-color: var(--wb950);
+}
+
+@keyframes wobble {
+  0%,
+  100% {
+    transform: translateX(-90%);
+  }
+
+  50% {
+    transform: translateX(90%);
+  }
+}

@@ -1,0 +1,63 @@
+.preCard {
+    width: 100%;
+    height: 10em;
+    box-shadow: var(--shadowM);
+    padding: 1em;
+    gap: .5em;
+    border-radius: .5em;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.flexBox {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    height: 100%;
+    width: 100%;
+    padding: 0.25em;
+}
+
+.preCardLoad {
+    width: 100%;
+    height: 35%;
+    background: linear-gradient(120deg, var(--color500) 30%, var(--color300) 38%, var(--color300) 40%, var(--color500) 48%);
+    border-radius: .5em;
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    animation: load89234 2s infinite;
+}
+
+.preCardColor {
+    width: 100%;
+    height: 65%;
+    border-radius: .5em;
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    animation: load89234 2s infinite;
+}
+
+.preCardTitle {
+    width: 100%;
+    height: 20%;
+    border-radius: 5px;
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    animation: load89234 2s infinite;
+}
+
+.preCardDesc {
+    width: 100%;
+    height: 80%;
+    border-radius: 5px;
+
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    animation: load89234 2s infinite;
+}
+
+@keyframes load89234 {
+    100% {
+        background-position: -100% 0;
+    }
+}

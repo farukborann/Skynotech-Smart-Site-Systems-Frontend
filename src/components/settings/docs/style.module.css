@@ -1,0 +1,42 @@
+.docs {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4em;
+    padding-bottom: 2em;
+    overflow-y: auto;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.secTitle {
+    font-size: 2em;
+    color: var(--wb800);
+}
+
+.secInfo {
+    font-size: 1em;
+    font-weight: 300;
+    color: var(--wb500);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+    line-height: 1.5em;
+}
+
+.secInfo>a {
+    font-size: 1em;
+    color: var(--wb700);
+    transition: .5s;
+}
+
+.secInfo>a:hover {
+    color: var(--wb500);
+}

@@ -1,0 +1,31 @@
+.sec {
+    width: calc((85vw - 15em)/4);
+    overflow: hidden;
+}
+
+.secTitle {
+    height: 7.5vh;
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+}
+
+.titleText {
+    font-size: 3.5em;
+    line-height: 3em;
+    color: var(--wb200);
+    font-weight: 300;
+}
+
+.sectionIcon {
+    height: .75em;
+    width: .75em;
+    border-radius: 50%;
+    opacity: .5;
+}
+
+.secContent {
+    height: calc(72vh - 5em);
+    width: 100%;
+    overflow-y: auto;
+}

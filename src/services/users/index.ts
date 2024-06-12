@@ -7,6 +7,7 @@ import {
   UpdatePrivacySettingsRequest,
   GetExternalUserRequest,
   ExternalUserResponse,
+  UpdateUserRequest,
 } from "./models";
 import { MessageResponse, QueryWithIdRequest } from "../models";
 
@@ -36,7 +37,7 @@ export async function createUserReq(payload: CreateUserRequest) {
 
 export async function updateUserReq(
   query: QueryWithIdRequest,
-  payload: CreateUserRequest
+  payload: UpdateUserRequest
 ) {
   const data = await postReq<ProfileResponse>(`/users/${query.id}`, payload);
 

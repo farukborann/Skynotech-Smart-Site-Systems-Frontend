@@ -1,0 +1,134 @@
+.notificationDiv {
+  min-height: 20vh;
+  width: 100%;
+  background-color: var(--wb50);
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--wb200);
+  margin-bottom: 1em;
+}
+
+/* HEADER */
+
+.divHeader {
+  padding: 1em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5em;
+  position: relative;
+}
+
+.warn,
+.info,
+.alert,
+.emergency {
+  padding: 0.25em 1em;
+  border-radius: 0.5em;
+  font-size: 0.85em;
+}
+
+.warn {
+  background-color: #ffbb002d;
+  color: #ffbb00;
+}
+
+.alert {
+  background-color: #4c00ff2d;
+  color: #4c00ff;
+}
+
+.emergency {
+  background-color: #ee30002d;
+  color: #ee3000;
+}
+
+.info {
+  background-color: #87ceeb2d;
+  color: #87ceeb;
+}
+
+.set {
+  color: var(--wb800);
+  cursor: pointer;
+}
+
+.statuSelector {
+  height: 10em;
+  width: 7.5em;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  background-color: var(--wb50);
+  border-radius: 0.25em;
+  transition: 0.5s;
+}
+
+/* PROBLEM */
+
+.divMain {
+  width: 100%;
+  min-height: 7vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em;
+}
+
+.problemTitle {
+  color: var(--wb800);
+  line-height: 1em;
+}
+
+.problemText {
+  color: var(--wb300);
+  font-weight: 300;
+  font-size: 0.95em;
+  line-height: 1.5em;
+}
+
+/* DATE AND SITE */
+
+.dateAndSite {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0 1em 1em 1em;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.5em;
+  border: 1px solid var(--wb200);
+  border-radius: 0.5em;
+  color: var(--wb400);
+  font-weight: 300;
+}
+
+.site {
+  padding: 0.5em;
+  background-color: var(--color100);
+  border-radius: 0.5em;
+  color: var(--color400);
+  font-weight: 300;
+}
+
+/* FOOTER */
+
+.divFooter {
+  width: 100%;
+  border-top: 1px solid var(--wb200);
+  padding: 0.5em 1em;
+}
+
+.profileImg {
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+  object-fit: cover;
+}

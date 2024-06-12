@@ -1,0 +1,99 @@
+.contact {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 4rem;
+    overflow-y: auto;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.secTitle {
+    font-size: 2rem;
+    color: var(--wb800);
+}
+
+.secInfo {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5em;
+    color: var(--wb300);
+}
+
+.contactDiv {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.form {
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.textarea {
+    height: 75%;
+    width: 100%;
+}
+
+.label {
+    color: var(--wb600);
+}
+
+.problem {
+    height: 100%;
+    width: 100%;
+    resize: none;
+    padding: 1rem;
+    background-color: var(--wb50);
+    color: var(--wb900);
+    border-radius: .75rem;
+    border: 2px solid var(--wb200);
+    margin-top: 1rem;
+}
+
+.problem:focus {
+    outline: none;
+    border: 2px solid var(--color500);
+}
+
+.button {
+    width: 8rem;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: .75rem;
+    background-color: var(--wb900);
+    color: var(--wb50);
+    border-radius: .5rem;
+}
+
+.rightSec {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    color: var(--wb900);
+    font-size: 5rem;
+    line-height: 5rem;
+    text-align: end;
+}

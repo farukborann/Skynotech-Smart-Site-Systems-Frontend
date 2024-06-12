@@ -1,0 +1,118 @@
+.darkTheme {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4em;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.secTitle {
+  font-size: 2em;
+  color: var(--wb900);
+}
+
+.secInfo {
+  font-size: 1em;
+  font-weight: 300;
+  color: var(--wb400);
+}
+
+.cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2em;
+}
+
+.card {
+  width: 100%;
+  background-color: var(--wb200);
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  height: 4.5em;
+  width: 100%;
+  gap: 2em;
+  background-color: var(--wb100);
+}
+
+.buttonLabel {
+  display: inline-block;
+  color: var(--wb900);
+  border-radius: 0.25em;
+  user-select: none;
+  font-size: 1.25em;
+  margin: auto;
+  position: relative;
+}
+
+.radioButton {
+  height: 100%;
+  width: 100%;
+  appearance: none;
+  border-radius: 0.5em;
+  position: absolute;
+  cursor: pointer;
+  outline: none;
+}
+
+.radioButton:before {
+  content: "";
+  position: absolute;
+  height: 2em;
+  width: 2em;
+  background-color: var(--color-xlight);
+  border: none;
+  border-radius: 50%;
+  bottom: 1.15em;
+  left: 1.25em;
+  border: 2px solid var(--hr);
+}
+
+.radioButton:after {
+  content: "";
+  position: absolute;
+  height: 1.5em;
+  width: 1.5em;
+  background-color: transparent;
+  border-radius: 50%;
+  bottom: 1.375em;
+  left: 1.5em;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.radioButton:checked {
+  border: 3px solid var(--color500);
+}
+
+.radioButton:checked:after {
+  background-color: var(--color500);
+}
+
+.previous {
+  max-height: 16em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  background-color: var(--wb200);
+}

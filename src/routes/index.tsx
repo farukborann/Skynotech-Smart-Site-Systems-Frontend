@@ -12,6 +12,8 @@ const SiteSelect = lazy(() => import("../pages/siteSelect"));
 const SiteDetail = lazy(() => import("../pages/site"));
 const SubSystemSelect = lazy(() => import("../pages/subSystemSelect"));
 const ScenarioSelect = lazy(() => import("../pages/scenarioSelect"));
+const Notifications = lazy(() => import("../pages/notifications"));
+const Settings = lazy(() => import("../pages/settings"));
 
 const RouteList = () => {
   return (
@@ -30,6 +32,8 @@ const RouteList = () => {
             <Route path="/site/:siteId" element={<SiteDetail />} />
             <Route path="/scenario/:siteId" element={<SubSystemSelect />} />
             <Route path="/scenario" element={<SiteSelect />} />
+            <Route path="/notifications" element={<Notifications />} />
+            <Route path="/settings/*" element={<Settings />} />
           </Route>
         </Route>
 

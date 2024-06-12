@@ -1,0 +1,124 @@
+.container {
+  height: 100vh;
+  width: calc(100vw - 5em);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.content {
+  background-color: var(--wb150);
+  height: calc(100vh - 5em);
+  width: calc(100vw - 10em);
+  border-radius: 1em;
+  display: flex;
+  overflow: hidden;
+  border: 2px solid var(--wb200);
+}
+
+.main {
+  height: calc(100vh - 5em);
+  width: calc(85vw - 10em);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--wb100);
+}
+
+.sections {
+  height: calc(85vh - 5em);
+  width: calc(85vw - 10em);
+  display: flex;
+  gap: 1em;
+  padding: 1em;
+}
+
+.header {
+  height: calc(100vh - 5em);
+  width: calc(15vw - 2px);
+  border-right: 2px solid var(--wb200);
+  background-color: var(--wb150);
+}
+
+.head {
+  height: calc(15vh - 2px);
+  border-bottom: 2px solid var(--wb200);
+  display: flex;
+  align-items: center;
+  padding: 2em;
+  gap: 1em;
+  color: var(--wb800);
+}
+
+.headIcon {
+  border-radius: 0.5em;
+  padding: 0.25em;
+  border: 2px solid var(--wb400);
+}
+
+.headTitle {
+  font-size: 1.75em;
+}
+
+.sidebar {
+  height: calc(85vh - 5em);
+  width: 100%;
+  padding: 2em 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--wb500);
+  text-align: start;
+}
+
+.contact {
+  color: var(--red);
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1.2em;
+}
+
+.text {
+  color: var(--wb400);
+  text-align: right;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+
+.mainHeader {
+  height: calc(15vh - 2px);
+  width: calc(85vw - 10em);
+  background-color: var(--wb150);
+  border-bottom: 2px solid var(--wb200);
+  display: flex;
+  align-items: center;
+  padding: 1em;
+}
+
+.searchbarDiv {
+  position: relative;
+}
+
+.label {
+  position: absolute;
+  left: 0.5em;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5em;
+  color: var(--gray);
+}
+
+.searchbar {
+  padding: 0.75em 0.75em 0.75em 3em;
+  border-radius: 2em;
+  width: calc((85vw - 15em) / 2);
+  border: none;
+  color: var(--wb800);
+  background-color: var(--transparent-card);
+}
+
+.searchbar:focus {
+  outline: none;
+}
