@@ -1,0 +1,170 @@
+.container {
+    background-color: var(--wb50);
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+    box-shadow: var(--shadowS);
+    border: 1px solid var(--wb200);
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    font-size: 24px;
+    padding: 12px 8px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 400;
+    opacity: .6;
+}
+
+.title_icon {
+    opacity: .6;
+}
+
+.icon {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color: var(--b);
+    font-size: 18px;
+    opacity: .6;
+}
+
+.icon:hover {
+    opacity: 1;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 8px;
+}
+
+.input_group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.label {
+    font-size: 14px;
+    height: 20px;
+    color: rgba(0, 0, 0, .5);
+}
+
+.systems {
+    max-width: 478px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.system_label {
+    position: relative;
+    min-height: 32px;
+    min-width: 120px;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, .1);
+    background-color: rgba(0, 0, 0, .025);
+    color: rgba(0, 0, 0, .75);
+    flex: 1;
+}
+
+.system_label:has(.input:checked) {
+    background-color: var(--b);
+    color: var(--w);
+}
+
+.input {
+    height: 100%;
+    width: 100%;
+    appearance: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.shorts {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.short_label {
+    position: relative;
+    border-radius: 6px;
+    line-height: 16px;
+    padding: 12px 32px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    border: 2px solid rgba(0, 0, 0, .05);
+    background-color: rgba(0, 0, 0, .025);
+    flex: 1;
+    color: var(--bb);
+    gap: 8px;
+    font-size: 20px;
+}
+
+.short_label:has(.input:checked) {
+    background-color: var(--b);
+    color: var(--w);
+}
+
+.kontak_span {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 12px;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn {
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 8px 16px;
+}
+
+.save {
+    background-color: var(--color-primer);
+    color: var(--b);
+    flex: 1;
+    font-weight: 400;
+}
+
+.cancel {
+    color: var(--red);
+    background-color: var(--w);
+}
+
+.btn:hover {
+    filter: brightness(.95);
+}

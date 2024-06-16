@@ -1,0 +1,116 @@
+.container {
+    width: 400px;
+    background-color: var(--bb);
+    color: var(--w);
+    border-radius: 16px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: var(--shadowS);
+    border: 1px solid var(--wb200);
+    gap: 10px;
+}
+
+.header {
+    width: 368px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    font-size: 24px;
+    padding: 12px 8px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 400;
+    opacity: .6;
+}
+
+.title_icon {
+    opacity: .6;
+}
+
+.icon {
+    position: absolute;
+    top: 0px;
+    right: -8px;
+    color: var(--w);
+    font-size: 18px;
+    opacity: .6;
+}
+
+.icon:hover {
+    opacity: 1;
+}
+
+.main {
+    height: 170px;
+    width: 384px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input_group {
+    width: 368px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.label {
+    font-size: 14px;
+    color: var(--w);
+}
+
+.input {
+    padding: 8px;
+    border-radius: 8px;
+    border: 2px solid var(--b);
+    background-color: var(--b);
+    color: var(--w);
+    font-weight: 400;
+    resize: none;
+}
+
+.input:focus {
+    border: 2px solid var(--color500);
+    outline: none;
+}
+
+.footer {
+    height: 50px;
+    width: 384px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.btn {
+    height: 50px;
+    min-width: 100px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.save {
+    background-color: var(--color-primer);
+    color: var(--b);
+    flex: 1;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.cancel {
+    color: var(--red);
+    background-color: var(--bb);
+}
+
+.btn:hover {
+    filter: brightness(1.5);
+}
