@@ -1,0 +1,175 @@
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--wb150);
+    z-index: 99999 !important;
+}
+
+.bg {
+    height: 95vh;
+    width: 47.5vw;
+    background: var(--login);
+    background-size: cover;
+    border-radius: 1em;
+}
+
+.form {
+    height: 95vh;
+    width: 47.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--wb50);
+    padding: 2em;
+    border-radius: 1em;
+    gap: 5vh;
+}
+
+.rightContent {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.title {
+    color: var(--wb900);
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.title>h1 {
+    font-size: 3em;
+}
+
+.formInput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 2em;
+}
+
+.flex_input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+    width: 100%;
+}
+
+.inputGroup {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1em;
+}
+
+.label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1em;
+    color: var(--wb900);
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    width: 8em;
+}
+
+.input,
+.input_lastname {
+    border: none;
+    padding: 1em 1em 1em 6em;
+    width: 100%;
+    border-radius: .675em;
+    background-color: var(--wb100);
+    color: var(--wb900);
+    border: 2px solid var(--wb150);
+}
+
+.input_lastname {
+    padding: 1em 1em 1em 9em;
+}
+
+.input:focus,
+.input_lastname:focus {
+    outline: none;
+    border: 2px solid var(--color500);
+}
+
+.forgotPassword {
+    color: var(--wb900);
+    font-weight: 600;
+    user-select: none;
+    cursor: pointer;
+    opacity: 0.75;
+}
+
+.showIcon {
+    position: absolute;
+    color: var(--wb900);
+    right: 1em;
+    top: 1.1em;
+    font-size: 1.25em;
+    cursor: pointer;
+}
+
+.warn {
+    color: var(--red);
+    font-size: 0.85em;
+}
+
+.btn_group {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    justify-content: space-between;
+    height: 7.5vh;
+}
+
+.btn {
+    background-color: var(--wb900);
+    padding: 0.75em;
+    font-size: 1.25em;
+    border-radius: .5em;
+    color: var(--wb50);
+    transition: 0.5s;
+    flex: 1;
+}
+
+.btn:hover {
+    /* opacity: .85; */
+    box-shadow: var(--shadowS);
+}
+
+.btn_back {
+    padding: 1.125em;
+    border-radius: .625em;
+    font-size: 1em;
+    background-color: var(--wb50);
+}
+
+.btn_back:hover {
+    filter: brightness(.875);
+}
+
+
+.error {
+    color: var(--red);
+}
