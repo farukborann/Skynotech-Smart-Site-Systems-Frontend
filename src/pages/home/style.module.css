@@ -54,7 +54,7 @@
     height: calc(100vh - 4em);
     width: calc(85vw - 11em);
     border-radius: 1em;
-    background: var(--meshedBG);
+    background: var(--MeshedBG);
     background-color: var(--color500);
     overflow: hidden;
     position: relative;

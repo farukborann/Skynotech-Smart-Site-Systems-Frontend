@@ -17,19 +17,20 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.5em;
+  gap: .5em;
 }
 
-.sidebarSec > h4 {
+.sidebarSec>h4 {
   color: var(--wb400);
   text-transform: uppercase;
-  font-size: 0.8em;
+  font-size: .8em;
   font-weight: 300;
   line-height: 100%;
-  margin-bottom: 0.5em;
+  margin-bottom: .5em;
 }
 
-.sidebarSec > a {
+.sidebarSec>a,
+.logout {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -37,10 +38,10 @@
   width: 90%;
   font-size: 1.15em;
   color: var(--wb800);
-  padding: 0.5em;
+  padding: .5em;
 }
 
-.sidebarSec > a > svg {
+.sidebarSec>a>svg {
   font-size: 1.25em;
 }
 
@@ -50,15 +51,15 @@
   gap: 2em;
 }
 
-.logout,
-.logout > svg {
+.logout {
   cursor: pointer;
   color: var(--red) !important;
 }
 
 .activeBar {
-  /* background-color: var(--wb200); */
-  border-radius: 0.5em;
+  background-color: var(--wb100);
+  filter: brightness(.975);
+  border-radius: .5em;
   color: var(--color500) !important;
-  transition: 0.5s;
+  transition: .5s;
 }

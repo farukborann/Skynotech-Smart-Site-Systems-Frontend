@@ -8,7 +8,7 @@ import { TbSmartHome, TbLogout } from "react-icons/tb";
 import { Link, useLocation } from "react-router-dom";
 import logo from "src/assets/logo.svg";
 
-import "src/styles/sidebar.css";
+import styles from "./style.module.css";
 
 function Sidebar() {
   const location = useLocation();
@@ -18,61 +18,68 @@ function Sidebar() {
   };
 
   return (
-    <div className="sidebarContainer">
-      <Link to="/home" className="sidebar-link icon-1">
-        <img src={logo} alt="Skynotech" width={100} className="logo" />
+    <div className={styles.container}>
+      <Link
+        to="/home"
+        className={`${styles.sidebar_link} ${styles.icon_1}`}>
+        <img
+          src={logo}
+          alt="Skynotech"
+          width={100}
+          className={styles.logo}
+        />
       </Link>
 
       <Link
         to={"/home"}
-        className={`sidebar-link ${
+        className={`${styles.sidebar_link} ${
           location.pathname === "/home" ||
           location.pathname.startsWith("/site/")
-            ? "activeIcon icon-2"
-            : "sbIcon icon-2"
-        }`}
-      >
+            ? `${styles.active_icon} ${styles.icon_2}`
+            : `${styles.sidebar_icon} ${styles.icon_2}`
+        }`}>
         <TbSmartHome />
       </Link>
       <Link
         to="/scenario"
-        className={`sidebar-link ${
+        className={`${styles.sidebar_link} ${
           location.pathname.startsWith("/scenario")
-            ? "activeIcon icon-3"
-            : "sbIcon icon-3"
-        }`}
-      >
+            ? `${styles.active_icon} ${styles.icon_3}`
+            : `${styles.sidebar_icon} ${styles.icon_3}`
+        }`}>
         <IoCalendarClearOutline />
       </Link>
       <Link
         to="/sites"
-        className={`sidebar-link ${
-          location.pathname === "/sites" ? "activeIcon icon-4" : "sbIcon icon-4"
-        }`}
-      >
+        className={`${styles.sidebar_link} ${
+          location.pathname === "/sites"
+            ? `${styles.active_icon} ${styles.icon_4}`
+            : `${styles.sidebar_icon} ${styles.icon_4}`
+        }`}>
         <BsFillHousesFill />
       </Link>
       <Link
         to="/notifications"
-        className={`sidebar-link ${
+        className={`${styles.sidebar_link} ${
           location.pathname === "/notifications"
-            ? "activeIcon icon-5"
-            : "sbIcon icon-5"
-        }`}
-      >
+            ? `${styles.active_icon} ${styles.icon_5}`
+            : `${styles.sidebar_icon} ${styles.icon_5}`
+        }`}>
         <IoNotificationsOutline />
       </Link>
       <Link
         to="/settings"
-        className={`sidebar-link ${
+        className={`${styles.sidebar_link} ${
           location.pathname.startsWith("/settings")
-            ? "activeIcon icon-6"
-            : "sbIcon icon-6"
-        }`}
-      >
+            ? `${styles.active_icon} ${styles.icon_6}`
+            : `${styles.sidebar_icon} ${styles.icon_6}`
+        }`}>
         <IoSettingsOutline />
       </Link>
-      <Link to="/login" className="sbIcon icon-7" onClick={handleLogout}>
+      <Link
+        to="/login"
+        className={`${styles.sidebar_icon} ${styles.icon_7}`}
+        onClick={handleLogout}>
         <TbLogout />
       </Link>
       <span className={getClassname(location.pathname)}></span>
@@ -83,22 +90,22 @@ function Sidebar() {
 function getClassname(pathname: string) {
   if (pathname.startsWith("/scenario")) {
     if (pathname.match(/^\/scenario\/[a-zA-Z0-9_-]+\/[a-zA-Z0-9_-]+$/)) {
-      return "icon-scenario-span span";
+      return `${styles.icon_scenario_span} ${styles.span}`;
     } else {
-      return "icon-3-span span";
+      return `${styles.icon_3_span} ${styles.span}`;
     }
   } else if (pathname === "/sites") {
-    return "icon-4-span span";
+    return `${styles.icon_4_span} ${styles.span}`;
   } else if (pathname === "/notifications") {
-    return "icon-5-span span";
+    return `${styles.icon_5_span} ${styles.span}`;
   } else if (pathname.startsWith("/settings")) {
-    return "icon-6-span span";
+    return `${styles.icon_6_span} ${styles.span}`;
   } else if (pathname.startsWith("/site")) {
-    return "span";
-  } else if (pathname === "/") {
-    return "icon-2-span span";
+    return styles.span;
+  } else if (pathname === "/home") {
+    return `${styles.icon_2_span} ${styles.span}`;
   } else {
-    return "login";
+    return styles.login;
   }
 }
 

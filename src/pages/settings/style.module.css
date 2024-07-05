@@ -1,7 +1,6 @@
 .settingsMainContainer {
   height: 95vh;
   width: calc(83vw);
-  margin-left: 2em;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -18,6 +17,7 @@
   border-radius: 1em;
   border: 2px solid var(--wb200);
   overflow: hidden;
+  margin: 2.5vh 2em;
 }
 
 .head,
@@ -39,7 +39,7 @@
   border-bottom: 2px solid var(--wb200);
 }
 
-.title > svg {
+.title>svg {
   color: var(--wb800);
   font-size: 2em;
   border: 2px solid var(--wb400);
@@ -110,6 +110,7 @@
 }
 
 @keyframes wobble {
+
   0%,
   100% {
     transform: translateX(-90%);
