@@ -135,9 +135,21 @@ const ScenarioSelect = () => {
   return (
     <>
       {showDeleteConfirmation && (
-        <div className={styles.confirmationBox} id="confirmationBox">
+        <div
+          className={styles.confirmationBox}
+          id="confirmationBox">
           <div className={styles.box}>
-            <h1 className={styles.text}>Silmeden önce onaylıyor musunuz?</h1>
+            <div className={styles.box_header}>
+              <span className={styles.box_icon}>
+                <MdDelete />
+              </span>
+              <div className={styles.box_header_text}>
+                <h1 className={styles.header_title}>Senaryoyu Sil?</h1>
+                <p className={styles.header_desc}>
+                  Senaryo silinecek. Bu işlem geri alınamaz.
+                </p>
+              </div>
+            </div>
             <div className={styles.confirmationButtons}>
               <button
                 className={`${styles.confirmationButton} ${styles.confirm}`}
@@ -154,25 +166,24 @@ const ScenarioSelect = () => {
                   }
 
                   await updateScenarios();
-                }}
-              >
-                <MdDelete />
+                }}>
                 Sil
               </button>
               <button
                 className={`${styles.confirmationButton} ${styles.cancel}`}
-                onClick={() => setShowDeleteConfirmation(false)}
-              >
+                onClick={() => setShowDeleteConfirmation(false)}>
                 İptal
               </button>
             </div>
           </div>
         </div>
       )}
-      <div className={styles.container} ref={pageRef}>
+      <div
+        className={styles.container}
+        ref={pageRef}>
         <div className={styles.sidebar}>
           <div className={styles.header}>
-            <div className={styles.titleContainer}>
+            {/* <div className={styles.titleContainer}>
               <div className={styles.header}>
                 <div className={styles.title}>
                   <p className={styles.p}>SİTE YÖNETİMİ</p>
@@ -182,7 +193,7 @@ const ScenarioSelect = () => {
                 </div>
               </div>
               <div className={styles.activities}></div>
-            </div>
+            </div> */}
           </div>
           <div className={styles.form}>
             {subSystem && (
@@ -196,7 +207,7 @@ const ScenarioSelect = () => {
           </div>
         </div>
         <div className={styles.main}>
-          <div className={styles.sensorler}>
+          {/* <div className={styles.sensorler}>
             <ScenarioSensors
               sensors={sensors}
               subSystemProp={
@@ -212,7 +223,7 @@ const ScenarioSelect = () => {
               }
               handleDeleteScenario={handleDeleteScenario}
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </>

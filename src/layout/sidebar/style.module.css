@@ -9,6 +9,7 @@
     user-select: none;
     overflow: hidden;
     user-select: none;
+    z-index: 999;
 }
 
 .active_icon {
@@ -85,6 +86,10 @@
 }
 
 .icon_3_span {
+    transform: translateY(8vh);
+}
+
+.icon_scenario_span {
     transform: translateY(8vh);
 }
 

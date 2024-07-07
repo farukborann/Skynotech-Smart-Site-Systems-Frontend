@@ -1,21 +1,33 @@
 .container {
   height: 100vh;
   width: calc(100vw - 5em);
-  padding: 5vh 2.5vw 5vh 0;
-  background-color: var(--b);
+  padding: 5vh 2.5vw;
+  background-color: var(--wb150);
   display: flex;
   align-items: flex-start;
+  gap: 2.5vw;
   justify-content: space-between;
 }
 
-.titleContainer {
-  width: 30vw;
-  height: 20vh;
+/* =============== */
+/* SIDEBAR SECTION */
+/* =============== */
+
+.sidebar {
+  flex: 3;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.header {
+  flex: 1;
+  background-color: black;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   color: var(--wb800);
-  z-index: 1000;
 }
 
 .title {
@@ -47,48 +59,44 @@
   padding-left: 1vw;
 }
 
-.sidebar {
-  height: 90vh;
-  padding-inline: 2.5vw;
-  width: 35vw;
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-
-.header {
-  width: 30vw;
-  height: 20vh;
-}
-
 .form {
-  height: calc(70vh - 1em);
-  width: 30vw;
   overflow: hidden;
   transition: 0.5s;
+  flex: 3;
 }
+
+/* ============ */
+/* MAIN SECTION */
+/* ============ */
 
 .main {
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 60vw;
+  flex: 5;
   height: 90vh;
   overflow: hidden;
+  background-color: var(--wb200);
+  border-radius: 2em;
 }
 
 .sensorler {
-  width: calc(60vw - 2em);
+  /* width: calc(60vw - 2em); */
   height: 20vh;
 }
 
 .senaryolar {
-  width: calc(60vw - 2em);
-  height: 70vh;
-  background: var(--meshedBG);
-  background-color: var(--color500);
+  /* width: calc(60vw - 2em); */
+  /* height: 70vh; */
+  /* background: var(--MeshedBG);
+  background-color: var(--color500); */
+  background-color: var(--wb200);
   border-radius: 0.5em;
 }
+
+/* =================== */
+/* CONFIRMATION BOX */
+/* =================== */
 
 .confirmationBox {
   position: absolute;
@@ -100,28 +108,55 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 9999;
+  z-index: 2;
 }
 
 .box {
-  height: 20vh;
-  width: 15vw;
   background-color: var(--wb50);
   border-radius: 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  gap: 1em;
-  padding: 2em 2em 1em 2em;
+  gap: 3em;
+  padding: 1em;
   border: 1px solid var(--hr);
   box-shadow: var(--shadowS);
   color: var(--wb800);
 }
 
-.text {
-  text-align: center;
+.box_header {
+  display: flex;
+  align-items: flex-start;
+  gap: .5em;
+  padding: 1em 1em 0 1em;
+}
+
+.box_icon {
+  font-size: 1.5em;
+  line-height: 1;
+  height: 1.75em;
+  width: 1.75em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--wb200);
+  border-radius: .25em;
+}
+
+.box_header_text {
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+}
+
+.header_title {
   font-size: 1em;
+}
+
+.header_desc {
+  font-size: .875em;
+  color: var(--wb400);
 }
 
 .confirmationButtons {
@@ -129,25 +164,31 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  gap: 1em;
+  gap: .5em;
 }
 
 .confirmationButton {
   padding: 0.5em;
-  width: 100%;
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5em;
   transition: 0.2s;
+  border-radius: .5em;
 }
 
-.confirmationButton:hover {
+.cancel:hover {
   background-color: var(--hr);
 }
 
 .confirm {
-  color: var(--red);
+  background-color: var(--red);
+  color: var(--w);
+}
+
+.confirm:hover {
+  filter: brightness(1.25);
 }
 
 .cancel {

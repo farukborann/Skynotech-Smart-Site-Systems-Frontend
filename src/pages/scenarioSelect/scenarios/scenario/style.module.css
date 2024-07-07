@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
     gap: .5em;
-    background-color: var(--color50);
+    backdrop-filter: blur(10px) brightness(1.1);
 }
 
 .content {
@@ -50,29 +50,8 @@
 }
 
 .settings {
-    width: 8em;
-    background-color: var(--wb50);
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 999;
-    border-radius: .5em;
-    padding: .5em;
-    display: flex;
-    flex-direction: column;
-    gap: .25em;
-    transform-origin: top right;
-    /* Sağ üstten açılmasını sağlar */
-}
 
-.settingsTitle {
-    font-size: .65em;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: var(--wb300);
-    padding-bottom: .5em;
-    border-bottom: 1px solid var(--wb200);
+    /* Sağ üstten açılmasını sağlar */
 }
 
 .close {
@@ -138,4 +117,84 @@
     padding: 0.25em .5em;
     border-radius: 2em;
     font-size: .85em;
+}
+
+.menuButton {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 0.375em;
+    padding: 0.375em;
+    font-size: 0.875em;
+    font-weight: 600;
+    color: var(--color400);
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: -.5em;
+    right: -.5em;
+}
+
+.menuItems {
+    width: 12.5em;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    font-size: 0.875em;
+    padding: .5em;
+    border-radius: .5em;
+    background-color: var(--wb50);
+    box-shadow: var(--shadowL);
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    transform-origin: top right;
+    transition: transform 100ms ease-out, opacity 100ms ease-out;
+}
+
+.settingsTitle {
+    font-size: .75em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--wb400);
+    padding: .75em .75em .25em .75em;
+}
+
+.menuItems[data-closed] {
+    transform: scale(0.95);
+    opacity: 0;
+}
+
+.menuItem,
+.menuItemDelete {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 0.75em;
+    border-radius: 0.5em;
+    padding: 0.375em 0.75em;
+    line-height: 1.5;
+}
+
+.menuItem:hover,
+.menuItemDelete:hover {
+    background-color: var(--wb150);
+}
+
+.menuItemDelete {
+    color: var(--red);
+}
+
+.menuIcon {
+    font-size: 1.15em;
+}
+
+.menuShortcut[data-focus]:focus {
+    display: inline;
+}
+
+.menuDivider {
+    margin: 0 .75em;
+    height: 2px;
+    background-color: var(--hr);
 }

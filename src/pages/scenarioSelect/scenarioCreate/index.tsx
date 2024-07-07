@@ -126,27 +126,38 @@ const CreateScenario = ({
   };
 
   return (
-    <form className={styles.container} onSubmit={handleSubmit}>
+    <form
+      className={styles.container}
+      onSubmit={handleSubmit}>
       <div className={styles.form}>
-        <div className={styles.infos}>
+        <div className={styles.scenario_name}>
           <NameForm
             scenarioName={scenarioName}
             setScenarioName={setScenarioName}
             scenarioDesc={scenarioDesc}
             setScenarioDesc={setScenarioDesc}
           />
+        </div>
+        <div className={styles.scenario_desc}>
           <IgnitionsForm
             ignitionsState={ignitionsState}
             handleIgnitionChange={handleIgnitionChange}
           />
         </div>
-        <div className={styles.conditions}>
+        <div className={styles.scenario_date}></div>
+        <div className={styles.scenario_time}>
           <TimesForm
             startTime={startTime}
             setStartTime={setStartTime}
             endTime={endTime}
             setEndTime={setEndTime}
           />
+        </div>
+        <div className={styles.scenario_ignition}></div>
+        <div className={styles.scenario_sensor}></div>
+        {/* <div className={styles.infos}>
+        </div>
+        <div className={styles.conditions}>
           <SensorForms
             setSelectedSensorId={setSelectedSensorId}
             selectedSensorId={selectedSensorId}
@@ -159,18 +170,19 @@ const CreateScenario = ({
             hasCondition={hasCondition}
             setHasCondition={setHasCondition}
           />
-        </div>
+        </div> */}
       </div>
       <div className={styles.btnGroup}>
         <button
           type="reset"
           className={styles.cancel}
-          onClick={() => handleReset()}
-        >
+          onClick={() => handleReset()}>
           <span className={styles.cancelSpan}>Temizle</span>
         </button>
-        <button type="submit" className={styles.save}>
-          <span className={styles.saveSpan}>Oluştur</span>
+        <button
+          type="submit"
+          className={styles.save}>
+          <span className={styles.saveSpan}>Senaryo Oluştur</span>
         </button>
       </div>
     </form>

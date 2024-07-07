@@ -1,15 +1,15 @@
 import { useState } from "react";
 import { gsap } from "gsap";
 import moment from "moment";
-import { FaAngleRight } from "react-icons/fa";
-import { FaRegClock } from "react-icons/fa6";
-import { HiDotsVertical } from "react-icons/hi";
+import { FaRegClock, FaAngleRight } from "react-icons/fa6";
+import { HiDotsHorizontal } from "react-icons/hi";
 import { IoMdTrash } from "react-icons/io";
 import { MdOutlineSensors } from "react-icons/md";
 import { TbClockEdit } from "react-icons/tb";
 import { VscWholeWord } from "react-icons/vsc";
 import { ScenarioResponse } from "src/services/scenarios/models";
 import { SubSystemProp } from "src/utils/sub-systems/getProps";
+import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 
 import styles from "./style.module.css";
 
@@ -74,18 +74,52 @@ const ScenarioDivs = ({
         <div className={styles.title}>
           <div className={styles.icon}>{subSystemProp?.icon}</div>
           <p className={styles.name}>{scenario.name}</p>
-          <div className={styles.settingsIcon} onClick={toggleSettings}>
-            <HiDotsVertical />
-          </div>
-          <div
-            id="settingsMenu"
-            className={`${styles.settings} ${
-              settingsVisible ? styles.show : styles.hide
-            }`}
-          >
-            <div className={styles.settingsTitle}>
+          <Menu>
+            <MenuButton className={styles.menuButton}>
+              <HiDotsHorizontal className={styles.chevronIcon} />
+            </MenuButton>
+            <MenuItems
+              transition
+              anchor="bottom end"
+              className={styles.menuItems}>
+              <MenuItem>
+                <div className={styles.settingsTitle}>
+                  <p>Düzenle / Değiştir</p>
+                </div>
+              </MenuItem>
+              <div className={styles.menuDivider} />
+              <MenuItem>
+                <button className={styles.menuItem}>
+                  <VscWholeWord className={styles.menuIcon} />
+                  Adı Düzenle
+                </button>
+              </MenuItem>
+              <MenuItem>
+                <button className={styles.menuItem}>
+                  <TbClockEdit className={styles.menuIcon} />
+                  Saati Düzenle
+                </button>
+              </MenuItem>
+              <MenuItem>
+                <button className={styles.menuItem}>
+                  <MdOutlineSensors className={styles.menuIcon} />
+                  Sensör Düzenle
+                </button>
+              </MenuItem>
+              <div className={styles.menuDivider} />
+              <MenuItem>
+                <button onClick={handleDeleteConfirmation} className={styles.menuItemDelete}>
+                  <IoMdTrash className={styles.menuIcon} />
+                  Sil
+                </button>
+              </MenuItem>
+            </MenuItems>
+          </Menu>
+          {/* <div className={styles.settingsTitle}>
               <p>Düzenle / Değiştir</p>
-              <span className={styles.close} onClick={hideMenu}>
+              <span
+                className={styles.close}
+                onClick={hideMenu}>
                 <FaAngleRight />
               </span>
             </div>
@@ -101,11 +135,9 @@ const ScenarioDivs = ({
             <hr />
             <button
               className={`${styles.settingsBtn} ${styles.deleteBtn}`}
-              onClick={handleDeleteConfirmation}
-            >
+              onClick={handleDeleteConfirmation}>
               <IoMdTrash /> Sil
-            </button>
-          </div>
+            </button> */}
         </div>
         <div className={styles.time}>
           <div className={styles.times}>

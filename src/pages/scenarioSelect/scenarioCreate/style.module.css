@@ -1,39 +1,18 @@
 .container {
-    height: calc(70vh - 1em);
-    width: 30vw;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 1em;
-}
-
-.infos {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    width: 14.5vw;
-    height: calc(70vh - 1em);
-}
-
-.conditions {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    width: 14.5vw;
-    height: calc(65vh - 2em);
-}
-
-.title {
-    color: #222222;
-    font-size: 1.25em;
-    font-weight: 100;
-    height: 3vh !important;
 }
 
 .form {
-    height: calc(65vh - 2em);
+    height: calc(100% - 5vh);
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     gap: .5vw;
+    background-color: red;
 }
 
 .btnGroup {
@@ -41,26 +20,22 @@
     align-items: center;
     justify-content: flex-start;
     gap: 1em;
-    height: 5vh;
-    width: 30vw;
 }
 
 .save {
-    padding: .5em 1em;
-    width: 7vw;
-    background-color: var(--b);
-    border: 2px solid var(--w);
+    padding: .75em;
+    flex: 1;
+    background-color: var(--color-primer);
+    border: 2px solid transparent;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: .375em;
-    color: var(--w);
+    color: var(--b);
 }
 
 .save:hover {
-    background-color: #222222;
-    border: 2px solid #dcdcdc;
-    color: #dcdcdc;
+    filter: brightness(.95);
 }
 
 .save:active {
@@ -68,10 +43,8 @@
 }
 
 .cancel {
-    background-color: var(--red);
-    color: var(--w);
+    color: var(--red);
     border-radius: .25em;
-    width: 7vw;
+    flex: 1;
     padding: .5em 1em;
-    border: 2px solid var(--red);
 }
